@@ -298,7 +298,18 @@
       "B2HA"
      ],
      "keywords": [],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Serviceanleitung Vitodens 200-W B2HF/B2KF (3,5\" Display)",
+       "type": "Montageanleitung",
+       "url": "https://www.heizman24.de/media/pdf/18/2a/be/VI-Installationsanleitung-Vitodens-200-W-3-5-Zoll-B2KF-1.pdf"
+      },
+      {
+       "title": "Montageanleitung Vitodens 200-W mit 7\" Touch-Display",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Viessmann-Vitodens-200-W-7-Zoll-Touchdisplay-Montageanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "viessmann.vitodens-222-f",
@@ -313,7 +324,13 @@
      "keywords": [
       "kompakt"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Planungsanleitung Vitodens 222-F",
+       "type": "Planungsanleitung",
+       "url": "https://www.meinhausshop.de/media/pdf/Planungsanleitung-Vitodens_222-F-Vitodens_Gas-Brennwertkessel.pdf"
+      }
+     ]
     },
     {
      "id": "viessmann.vitodens-222-w",
@@ -451,7 +468,23 @@
       "propan",
       "r290"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Serviceanleitung Vitocal 250-A (1 Heizkreis)",
+       "type": "Montageanleitung",
+       "url": "https://documents.unidomo.de/de/viessmann/6196944VSA00001_1.pdf"
+      },
+      {
+       "title": "Montage- und Serviceanleitung Vitocal 250-A 2C (2 Heizkreise)",
+       "type": "Montageanleitung",
+       "url": "https://documents.unidomo.de/de/viessmann/6198667VAP00001_1.pdf"
+      },
+      {
+       "title": "Planungsanleitung Vitocal 250-A / 252-A",
+       "type": "Planungsanleitung",
+       "url": "https://documents.unidomo.de/de/viessmann/6175107VPA00006_1.pdf"
+      }
+     ]
     },
     {
      "id": "viessmann.vitocal-250-s",
@@ -617,7 +650,23 @@
      "keywords": [
       "kombitherme"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montageanleitung CGB-2 / CGB-2K für den Fachhandwerker",
+       "type": "Montageanleitung",
+       "url": "https://www.zup24.de/up/img/Montageanleitung-Gasbrennwerttherme-Wolf-CGB-2-2K.pdf"
+      },
+      {
+       "title": "Montageanleitung CGB-2-14 / CGB-2K",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-CGB-2-14-8615008_10_Montageanleitung-Gasbrennwerttherme-Wolf-CGB-2-2K.pdf"
+      },
+      {
+       "title": "Bedienungsanleitung Wolf Brennwertthermen",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.loebbeshop.de/Media/Default/Uploaded/static/doc/anleitung-brennwertthermen_5467.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.fgb-fgb-k",
@@ -706,7 +755,13 @@
       "propan",
       "r290"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Betriebsanleitung CHA-Monoblock",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-Luft-Wasser-Waermepumpe-CHA-Monoblock-Betriebsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.chc-monoblock-chc-split",
@@ -750,7 +805,18 @@
      "keywords": [
       "split"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Bedienungsanleitung BWL-1S (07)",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-BWL-1-S-07-9146180N01_30_Montage-und-Bedienungsanleitung-Wolf-BWL-1S.pdf"
+      },
+      {
+       "title": "Montage- und Bedienungsanleitung BWL-1S (14)",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-BWL-1-S-14-9146184_30_Montage-und-Bedienungsanleitung-Wolf-BWL-1S.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.wpm-1-wpm-2-waermepumpenmanager",
@@ -761,7 +827,13 @@
       "WPM-2"
      ],
      "keywords": [],
-     "documents": []
+     "documents": [
+      {
+       "title": "Bedienungsanleitung WPM-1",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.kesselheld.de/content/uploads/2017/05/wolf-heiztechnik-wpm-1-bedienungsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.bedienmodul-bm-2-am",
@@ -776,7 +848,18 @@
       "bedienmodul",
       "anzeigemodul"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montageanleitung Bedienmodul BM-2",
+       "type": "Montageanleitung",
+       "url": "https://heizman24.de/media/pdf/46/26/e4/Wolf-BM-2-Montageanleitung.pdf"
+      },
+      {
+       "title": "Bedienungsanleitung Bedienmodul BM-2",
+       "type": "Bedienungsanleitung",
+       "url": "https://heizman24.de/media/pdf/4d/13/0c/Wolf-BM-2-Bedienungsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.mischermodul-mm-2-kaskadenmodul-km-2",
@@ -791,7 +874,13 @@
       "mischer",
       "kaskade"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Bedienungsanleitung Kaskadenmodul KM",
+       "type": "Montageanleitung",
+       "url": "https://www.loebbeshop.de/Media/Default/Uploaded/static/doc/kaskadenmodul-km-montage-und-bedienungsanleitung_3230.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.solarmodul-sm1-2-sm2-2",
@@ -868,7 +957,13 @@
      "keywords": [
       "wohnraumlüftung"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montageanleitung CWL-180 Excellent",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-2137994F01_30_Montageanleitung-Wolf-CWL-180.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.cwl-f-cwl-d",
@@ -882,7 +977,18 @@
      "keywords": [
       "dezentral"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montageanleitung CWL-F-150",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-2138099F01_30_Montageanleitung-Wolf-CWL-F-150.pdf"
+      },
+      {
+       "title": "Montage- und Bedienungsanleitung CWL-D-70",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wolf-CWL-D-70-2138513F10_30_Montage-_und_Bedienungsanleitung-Wolf-CWL-D-70.pdf"
+      }
+     ]
     },
     {
      "id": "wolf.cfl-wt-kg-top",
@@ -929,7 +1035,23 @@
      "keywords": [
       "purflam"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Betriebsanleitung WL5-PB-H",
+       "type": "Montageanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/27/59/a0/Weishaupt-Oelbrenner-WL5-PB-H-Montage-u-Betriebsanleitung.pdf"
+      },
+      {
+       "title": "Montage- und Betriebsanleitung WL5/2-B",
+       "type": "Montageanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/8f/64/ef/Weishaupt-Oelbrenner-WL5-2-B-Montage-u-Betriebsanleitung.pdf"
+      },
+      {
+       "title": "Montageanleitung WL10/2-D",
+       "type": "Montageanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/13/99/26/Weishaupt-l-Brenner-WL10-2-D-Installtions-und-Montageanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "weishaupt.gasbrenner-wg5-wg10-wg20-wg30-wg40",
@@ -946,7 +1068,18 @@
       "ln",
       "low nox"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Betriebsanleitung WG5/1-A LN",
+       "type": "Montageanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/52/02/62/Weishaupt-Gasbrenner-WG5-1-A-LN.pdf"
+      },
+      {
+       "title": "Montage- und Betriebsanleitung WG40/1-A ZM-LN",
+       "type": "Montageanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/b6/79/25/Weishaupt-WG40-1-A-ZM-LN-Montage-und-Betriebsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "weishaupt.monarch-wm-l-wm-g-wm-gl",
@@ -978,7 +1111,13 @@
      "keywords": [
       "gas-brennwert"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Betriebsanleitung WTC-GW 25-B Kompakt (2025)",
+       "type": "Montageanleitung",
+       "url": "https://weishaupt.de/uploads/tx_weishaupt_documents/documents/83320701.pdf"
+      }
+     ]
     },
     {
      "id": "weishaupt.thermo-condens-wtc-gb",
@@ -995,7 +1134,13 @@
      "keywords": [
       "bodenstehend"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Bedienungs- und Installationsanleitung WTC-GB 120-A",
+       "type": "Montageanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/51/be/da/Weishaupt-WTC-GB-120A-Bedienungs-und-Installationsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "weishaupt.thermo-condens-wtc-ob",
@@ -1079,7 +1224,13 @@
       "fernbedienstation",
       "erweiterungsmodul"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Betriebsanleitung Erweiterungsmodul WEM-EM-HK",
+       "type": "Montageanleitung",
+       "url": "https://www.wolf-online-shop.de/media/products/83304801.pdf"
+      }
+     ]
     },
     {
      "id": "weishaupt.speicher-was-was-sol",
@@ -1135,7 +1286,23 @@
      "keywords": [
       "wandgerät"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Installationsanleitung Logamax plus GB192i.2",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Buderus-Gas-Brennwertgeraet-Logamax-Plus-GB192i-2-Installationsanleitung.pdf"
+      },
+      {
+       "title": "Installations- und Wartungsanleitung GB192i.2 15 H",
+       "type": "Serviceanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/36/5d/c7/Buderus-Logamax-plus-GB192i-2-15-H-Installations-und-Wartungsanleitung.pdf"
+      },
+      {
+       "title": "Bedienungsanleitung Logamax plus GB192i.2",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Buderus-Gas-Brennwertgeraet-Logamax-Plus-GB192i-2-Bedienungsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "buderus.logamax-plus-gb162-gb062",
@@ -1162,7 +1329,13 @@
      "keywords": [
       "bodenstehend"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Installationsanleitung Logano plus KB192i.2",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Buderus-Gas-Brennwertkessel-KB192i-2-Installationsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "buderus.logano-plus-gb125-g125",
@@ -1232,7 +1405,18 @@
       "bedieneinheit",
       "ems plus"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Bedienungsanleitung Bedieneinheit Logamatic RC310",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Buderus-Bedieneinheit-RC310-Bedienungsanleitung.pdf"
+      },
+      {
+       "title": "Bedienungsanleitung Logamatic RC310 (2019/10)",
+       "type": "Bedienungsanleitung",
+       "url": "https://documents.unidomo.de/buderus/6720894022.pdf"
+      }
+     ]
     },
     {
      "id": "buderus.logamatic-hmc300-bc10-mc110",
@@ -1293,7 +1477,13 @@
       "L135"
      ],
      "keywords": [],
-     "documents": []
+     "documents": [
+      {
+       "title": "Installationsanleitung Logalux SU300/400/5",
+       "type": "Montageanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Buderus-Warmwasserspeicher-Logalux-SU300-400-5-Installationsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "buderus.logasol-skn-skt",
@@ -1347,7 +1537,28 @@
      "keywords": [
       "kombitherme"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Installations- und Wartungsanleitung ecoTEC plus VC 15CS/1-5 – VC 25CS/1-5",
+       "type": "Montageanleitung",
+       "url": "https://www.vaillant.at/api/download/product/de/_ecotec-plus-vc-15cs1%E2%80%915---vc-25cs1-5_1491652.pdf"
+      },
+      {
+       "title": "Installations- und Wartungsanleitung ecoTEC plus VCW 26CS/1-5 und VCW 32CS/1-5",
+       "type": "Montageanleitung",
+       "url": "https://www.vaillant.at/api/download/product/de/_ecotec-plus-vcw-26cs1%E2%80%915-und-vcw-32cs1-5_1343467.pdf"
+      },
+      {
+       "title": "Installations- und Wartungsanleitung ecoTEC plus VC 146/5-5",
+       "type": "Serviceanleitung",
+       "url": "https://www.intec-heizung.de/media/pdf/e6/33/16/Vailland-ecoTEC-plus-VC-146-5-5-Installations-u-Wartungsanleitung.pdf"
+      },
+      {
+       "title": "Bedienungsanleitung ecoTEC plus",
+       "type": "Bedienungsanleitung",
+       "url": "https://loebbeshop.de/Media/Default/Uploaded/static/doc/bedienungsanleitung_ecotec_plus_2288.pdf"
+      }
+     ]
     },
     {
      "id": "vaillant.ecotec-pure-exclusive",
@@ -1359,7 +1570,13 @@
       "VC 30CS/1-7"
      ],
      "keywords": [],
-     "documents": []
+     "documents": [
+      {
+       "title": "Betriebsanleitung ecoTEC pure",
+       "type": "Bedienungsanleitung",
+       "url": "https://documents.unidomo.de/de/Bedienungsanleitung/Vaillant/Betriebsanleitung-ecoTec-pure.pdf"
+      }
+     ]
     },
     {
      "id": "vaillant.ecocompact",
@@ -1416,7 +1633,18 @@
       "r290",
       "monoblock"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Installationsanleitung aroTHERM plus",
+       "type": "Montageanleitung",
+       "url": "https://www.vaillant.de/api/download/product/de/installationsanleitung_arotherm-plus_1483575.pdf"
+      },
+      {
+       "title": "Betriebsanleitung aroTHERM plus VWL ../6 A",
+       "type": "Bedienungsanleitung",
+       "url": "https://documents.unidomo.de/de/vaillant/0020299004-09.pdf"
+      }
+     ]
     },
     {
      "id": "vaillant.arotherm-split-split-plus",
@@ -1430,7 +1658,13 @@
      "keywords": [
       "split"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Betriebs- und Installationsanleitung aroTHERM Split",
+       "type": "Montageanleitung",
+       "url": "https://www.vaillant.de/api/download/product/de/betriebs--und-installationsanleitung_arotherm-split_1354812.pdf"
+      }
+     ]
     },
     {
      "id": "vaillant.flexotherm-exclusive-flexocompact-exclusive",
@@ -1472,7 +1706,18 @@
      "keywords": [
       "systemregler"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Betriebs- und Installationsanleitung sensoCOMFORT VRC 720/3",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Vaillant-Regelung-sensoCOMFORT-VRC-720-3-Betriebs-und-Installationsanleitung.pdf"
+      },
+      {
+       "title": "Betriebsanleitung sensoCOMFORT VRC 720f/3",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.heima24.de/shop/images/products/media/betr-sensocom-3-vrc.pdf"
+      }
+     ]
     },
     {
      "id": "vaillant.multimatic-vrc-700-calormatic",
@@ -1485,7 +1730,13 @@
       "VRT 370"
      ],
      "keywords": [],
-     "documents": []
+     "documents": [
+      {
+       "title": "Bedienungsanleitung calorMATIC VRT 250",
+       "type": "Bedienungsanleitung",
+       "url": "https://loebbeshop.de/Media/Default/Uploaded/static/doc/bedienung-vrt250_5876.pdf"
+      }
+     ]
     },
     {
      "id": "vaillant.sensohome-vrt-380",
@@ -2587,7 +2838,18 @@
       "heizungspumpe",
       "hocheffizienz"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Montage- und Betriebsanleitung ALPHA2",
+       "type": "Montageanleitung",
+       "url": "https://api.grundfos.com/literature/Grundfosliterature-6154082.pdf"
+      },
+      {
+       "title": "Montage- und Betriebsanleitung ALPHA2 L",
+       "type": "Montageanleitung",
+       "url": "https://api.grundfos.com/literature/Grundfosliterature-1191162.pdf"
+      }
+     ]
     },
     {
      "id": "grundfos.comfort-pm-up",
@@ -2685,7 +2947,18 @@
      "keywords": [
       "heizungspumpe"
      ],
-     "documents": []
+     "documents": [
+      {
+       "title": "Einbau- und Betriebsanleitung Yonos PICO plus (2025)",
+       "type": "Montageanleitung",
+       "url": "https://cms.media.wilo.com/dcidocpfinder/wilo254571/3673144/wilo254571.pdf"
+      },
+      {
+       "title": "Bedienungsanleitung Yonos PICO",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.pumpenscout.de/out/media/Bedienungsanleitung_YONOS_PICO.pdf"
+      }
+     ]
     },
     {
      "id": "wilo.stratos-maxo-stratos-pico",
@@ -2696,7 +2969,13 @@
       "Stratos PICO 25/1-6"
      ],
      "keywords": [],
-     "documents": []
+     "documents": [
+      {
+       "title": "Betriebsanleitung Stratos PICO plus",
+       "type": "Bedienungsanleitung",
+       "url": "https://www.heizungsdiscount24.de/pdf/Wilo-Stratos-Pico-Plus-Betriebsanleitung.pdf"
+      }
+     ]
     },
     {
      "id": "wilo.star-z-nova-varios-pico",

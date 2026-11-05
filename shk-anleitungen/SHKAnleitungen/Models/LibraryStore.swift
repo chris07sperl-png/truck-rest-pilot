@@ -79,6 +79,9 @@ final class LibraryStore {
 
     func document(_ id: UUID) -> LocalDocument? { documents.first { $0.id == id } }
 
+    /// Bereits offline gespeichertes Dokument zu einer Online-Adresse.
+    func document(withSource url: URL) -> LocalDocument? { documents.first { $0.sourceURL == url } }
+
     /// Kopiert ein PDF (aus "Dateien" oder einem Download) in die Bibliothek.
     @discardableResult
     func importPDF(from source: URL, title: String, docType: DocType,

@@ -13,6 +13,7 @@ Skript erneut ausführen:
     python3 tools/build_catalog.py
 """
 import json
+from urllib.parse import quote
 import re
 import sys
 from pathlib import Path
@@ -753,6 +754,121 @@ MANUFACTURERS = [
 ]
 
 
+# Bekannte Direkt-Links zu Anleitungen (PDF). Typen: bedienung, montage, service, planung, datenblatt, ersatzteile.
+# Gefunden per Websuche; Herstellerseiten bevorzugt, sonst Kopien von Fachhändlern.
+# Beim Ergänzen: Ausgabe/Revision auf dem Deckblatt prüfen.
+DOCS = {
+    ("Viessmann", "Vitodens 200-W"): [
+        ("Montage- und Serviceanleitung Vitodens 200-W B2HF/B2KF (3,5\" Display)", "montage", "https://www.heizman24.de/media/pdf/18/2a/be/VI-Installationsanleitung-Vitodens-200-W-3-5-Zoll-B2KF-1.pdf"),
+        ("Montageanleitung Vitodens 200-W mit 7\" Touch-Display", "montage", "https://www.heizungsdiscount24.de/pdf/Viessmann-Vitodens-200-W-7-Zoll-Touchdisplay-Montageanleitung.pdf"),
+    ],
+    ("Viessmann", "Vitodens 222-F"): [
+        ("Planungsanleitung Vitodens 222-F", "planung", "https://www.meinhausshop.de/media/pdf/Planungsanleitung-Vitodens_222-F-Vitodens_Gas-Brennwertkessel.pdf"),
+    ],
+    ("Viessmann", "Vitocal 250-A / 252-A"): [
+        ("Montage- und Serviceanleitung Vitocal 250-A (1 Heizkreis)", "montage", "https://documents.unidomo.de/de/viessmann/6196944VSA00001_1.pdf"),
+        ("Montage- und Serviceanleitung Vitocal 250-A 2C (2 Heizkreise)", "montage", "https://documents.unidomo.de/de/viessmann/6198667VAP00001_1.pdf"),
+        ("Planungsanleitung Vitocal 250-A / 252-A", "planung", "https://documents.unidomo.de/de/viessmann/6175107VPA00006_1.pdf"),
+    ],
+    ("Wolf", "CGB-2 / CGB-2K"): [
+        ("Montageanleitung CGB-2 / CGB-2K für den Fachhandwerker", "montage", "https://www.zup24.de/up/img/Montageanleitung-Gasbrennwerttherme-Wolf-CGB-2-2K.pdf"),
+        ("Montageanleitung CGB-2-14 / CGB-2K", "montage", "https://www.heizungsdiscount24.de/pdf/Wolf-CGB-2-14-8615008_10_Montageanleitung-Gasbrennwerttherme-Wolf-CGB-2-2K.pdf"),
+        ("Bedienungsanleitung Wolf Brennwertthermen", "bedienung", "https://www.loebbeshop.de/Media/Default/Uploaded/static/doc/anleitung-brennwertthermen_5467.pdf"),
+    ],
+    ("Wolf", "CHA-Monoblock"): [
+        ("Betriebsanleitung CHA-Monoblock", "bedienung", "https://www.heizungsdiscount24.de/pdf/Wolf-Luft-Wasser-Waermepumpe-CHA-Monoblock-Betriebsanleitung.pdf"),
+    ],
+    ("Wolf", "BWL-1S / BWL-1 / BWS-1"): [
+        ("Montage- und Bedienungsanleitung BWL-1S (07)", "montage", "https://www.heizungsdiscount24.de/pdf/Wolf-BWL-1-S-07-9146180N01_30_Montage-und-Bedienungsanleitung-Wolf-BWL-1S.pdf"),
+        ("Montage- und Bedienungsanleitung BWL-1S (14)", "montage", "https://www.heizungsdiscount24.de/pdf/Wolf-BWL-1-S-14-9146184_30_Montage-und-Bedienungsanleitung-Wolf-BWL-1S.pdf"),
+    ],
+    ("Wolf", "WPM-1 / WPM-2 Wärmepumpenmanager"): [
+        ("Bedienungsanleitung WPM-1", "bedienung", "https://www.kesselheld.de/content/uploads/2017/05/wolf-heiztechnik-wpm-1-bedienungsanleitung.pdf"),
+    ],
+    ("Wolf", "Bedienmodul BM-2 / AM"): [
+        ("Montageanleitung Bedienmodul BM-2", "montage", "https://heizman24.de/media/pdf/46/26/e4/Wolf-BM-2-Montageanleitung.pdf"),
+        ("Bedienungsanleitung Bedienmodul BM-2", "bedienung", "https://heizman24.de/media/pdf/4d/13/0c/Wolf-BM-2-Bedienungsanleitung.pdf"),
+    ],
+    ("Wolf", "Mischermodul MM-2 / Kaskadenmodul KM-2"): [
+        ("Montage- und Bedienungsanleitung Kaskadenmodul KM", "montage", "https://www.loebbeshop.de/Media/Default/Uploaded/static/doc/kaskadenmodul-km-montage-und-bedienungsanleitung_3230.pdf"),
+    ],
+    ("Wolf", "CWL Excellent / CWL-2"): [
+        ("Montageanleitung CWL-180 Excellent", "montage", "https://www.heizungsdiscount24.de/pdf/Wolf-2137994F01_30_Montageanleitung-Wolf-CWL-180.pdf"),
+    ],
+    ("Wolf", "CWL-F / CWL-D"): [
+        ("Montageanleitung CWL-F-150", "montage", "https://www.heizungsdiscount24.de/pdf/Wolf-2138099F01_30_Montageanleitung-Wolf-CWL-F-150.pdf"),
+        ("Montage- und Bedienungsanleitung CWL-D-70", "montage", "https://www.heizungsdiscount24.de/pdf/Wolf-CWL-D-70-2138513F10_30_Montage-_und_Bedienungsanleitung-Wolf-CWL-D-70.pdf"),
+    ],
+    ("Weishaupt", "Thermo Condens WTC-GW"): [
+        ("Montage- und Betriebsanleitung WTC-GW 25-B Kompakt (2025)", "montage", "https://weishaupt.de/uploads/tx_weishaupt_documents/documents/83320701.pdf"),
+    ],
+    ("Weishaupt", "Thermo Condens WTC-GB"): [
+        ("Bedienungs- und Installationsanleitung WTC-GB 120-A", "montage", "https://www.intec-heizung.de/media/pdf/51/be/da/Weishaupt-WTC-GB-120A-Bedienungs-und-Installationsanleitung.pdf"),
+    ],
+    ("Weishaupt", "Ölbrenner WL5 / WL10 / WL20 / WL30"): [
+        ("Montage- und Betriebsanleitung WL5-PB-H", "montage", "https://www.intec-heizung.de/media/pdf/27/59/a0/Weishaupt-Oelbrenner-WL5-PB-H-Montage-u-Betriebsanleitung.pdf"),
+        ("Montage- und Betriebsanleitung WL5/2-B", "montage", "https://www.intec-heizung.de/media/pdf/8f/64/ef/Weishaupt-Oelbrenner-WL5-2-B-Montage-u-Betriebsanleitung.pdf"),
+        ("Montageanleitung WL10/2-D", "montage", "https://www.intec-heizung.de/media/pdf/13/99/26/Weishaupt-l-Brenner-WL10-2-D-Installtions-und-Montageanleitung.pdf"),
+    ],
+    ("Weishaupt", "Gasbrenner WG5 / WG10 / WG20 / WG30 / WG40"): [
+        ("Montage- und Betriebsanleitung WG5/1-A LN", "montage", "https://www.intec-heizung.de/media/pdf/52/02/62/Weishaupt-Gasbrenner-WG5-1-A-LN.pdf"),
+        ("Montage- und Betriebsanleitung WG40/1-A ZM-LN", "montage", "https://www.intec-heizung.de/media/pdf/b6/79/25/Weishaupt-WG40-1-A-ZM-LN-Montage-und-Betriebsanleitung.pdf"),
+    ],
+    ("Weishaupt", "Regelung WCM / WEM"): [
+        ("Montage- und Betriebsanleitung Erweiterungsmodul WEM-EM-HK", "montage", "https://www.wolf-online-shop.de/media/products/83304801.pdf"),
+    ],
+    ("Buderus", "Logamax plus GB172i / GB182i / GB192i"): [
+        ("Installationsanleitung Logamax plus GB192i.2", "montage", "https://www.heizungsdiscount24.de/pdf/Buderus-Gas-Brennwertgeraet-Logamax-Plus-GB192i-2-Installationsanleitung.pdf"),
+        ("Installations- und Wartungsanleitung GB192i.2 15 H", "service", "https://www.intec-heizung.de/media/pdf/36/5d/c7/Buderus-Logamax-plus-GB192i-2-15-H-Installations-und-Wartungsanleitung.pdf"),
+        ("Bedienungsanleitung Logamax plus GB192i.2", "bedienung", "https://www.heizungsdiscount24.de/pdf/Buderus-Gas-Brennwertgeraet-Logamax-Plus-GB192i-2-Bedienungsanleitung.pdf"),
+    ],
+    ("Buderus", "Logano plus KB192i / KB195i"): [
+        ("Installationsanleitung Logano plus KB192i.2", "montage", "https://www.heizungsdiscount24.de/pdf/Buderus-Gas-Brennwertkessel-KB192i-2-Installationsanleitung.pdf"),
+    ],
+    ("Buderus", "Logamatic RC310 / RC220 / RC200 / RC100"): [
+        ("Bedienungsanleitung Bedieneinheit Logamatic RC310", "bedienung", "https://www.heizungsdiscount24.de/pdf/Buderus-Bedieneinheit-RC310-Bedienungsanleitung.pdf"),
+        ("Bedienungsanleitung Logamatic RC310 (2019/10)", "bedienung", "https://documents.unidomo.de/buderus/6720894022.pdf"),
+    ],
+    ("Buderus", "Logalux SU / SM / PNR / L"): [
+        ("Installationsanleitung Logalux SU300/400/5", "montage", "https://www.heizungsdiscount24.de/pdf/Buderus-Warmwasserspeicher-Logalux-SU300-400-5-Installationsanleitung.pdf"),
+    ],
+    ("Vaillant", "ecoTEC plus"): [
+        ("Installations- und Wartungsanleitung ecoTEC plus VC 15CS/1-5 – VC 25CS/1-5", "montage", "https://www.vaillant.at/api/download/product/de/_ecotec-plus-vc-15cs1‑5---vc-25cs1-5_1491652.pdf"),
+        ("Installations- und Wartungsanleitung ecoTEC plus VCW 26CS/1-5 und VCW 32CS/1-5", "montage", "https://www.vaillant.at/api/download/product/de/_ecotec-plus-vcw-26cs1‑5-und-vcw-32cs1-5_1343467.pdf"),
+        ("Installations- und Wartungsanleitung ecoTEC plus VC 146/5-5", "service", "https://www.intec-heizung.de/media/pdf/e6/33/16/Vailland-ecoTEC-plus-VC-146-5-5-Installations-u-Wartungsanleitung.pdf"),
+        ("Bedienungsanleitung ecoTEC plus", "bedienung", "https://loebbeshop.de/Media/Default/Uploaded/static/doc/bedienungsanleitung_ecotec_plus_2288.pdf"),
+    ],
+    ("Vaillant", "ecoTEC pure / exclusive"): [
+        ("Betriebsanleitung ecoTEC pure", "bedienung", "https://documents.unidomo.de/de/Bedienungsanleitung/Vaillant/Betriebsanleitung-ecoTec-pure.pdf"),
+    ],
+    ("Vaillant", "aroTHERM plus"): [
+        ("Installationsanleitung aroTHERM plus", "montage", "https://www.vaillant.de/api/download/product/de/installationsanleitung_arotherm-plus_1483575.pdf"),
+        ("Betriebsanleitung aroTHERM plus VWL ../6 A", "bedienung", "https://documents.unidomo.de/de/vaillant/0020299004-09.pdf"),
+    ],
+    ("Vaillant", "aroTHERM Split / Split plus"): [
+        ("Betriebs- und Installationsanleitung aroTHERM Split", "montage", "https://www.vaillant.de/api/download/product/de/betriebs--und-installationsanleitung_arotherm-split_1354812.pdf"),
+    ],
+    ("Vaillant", "sensoCOMFORT VRC 720"): [
+        ("Betriebs- und Installationsanleitung sensoCOMFORT VRC 720/3", "bedienung", "https://www.heizungsdiscount24.de/pdf/Vaillant-Regelung-sensoCOMFORT-VRC-720-3-Betriebs-und-Installationsanleitung.pdf"),
+        ("Betriebsanleitung sensoCOMFORT VRC 720f/3", "bedienung", "https://www.heima24.de/shop/images/products/media/betr-sensocom-3-vrc.pdf"),
+    ],
+    ("Vaillant", "multiMATIC VRC 700 / calorMATIC"): [
+        ("Bedienungsanleitung calorMATIC VRT 250", "bedienung", "https://loebbeshop.de/Media/Default/Uploaded/static/doc/bedienung-vrt250_5876.pdf"),
+    ],
+    ("Grundfos", "ALPHA1 / ALPHA2 / ALPHA3"): [
+        ("Montage- und Betriebsanleitung ALPHA2", "montage", "https://api.grundfos.com/literature/Grundfosliterature-6154082.pdf"),
+        ("Montage- und Betriebsanleitung ALPHA2 L", "montage", "https://api.grundfos.com/literature/Grundfosliterature-1191162.pdf"),
+    ],
+    ("Wilo", "Yonos PICO / Para"): [
+        ("Einbau- und Betriebsanleitung Yonos PICO plus (2025)", "montage", "https://cms.media.wilo.com/dcidocpfinder/wilo254571/3673144/wilo254571.pdf"),
+        ("Bedienungsanleitung Yonos PICO", "bedienung", "https://www.pumpenscout.de/out/media/Bedienungsanleitung_YONOS_PICO.pdf"),
+    ],
+    ("Wilo", "Stratos MAXO / Stratos PICO"): [
+        ("Betriebsanleitung Stratos PICO plus", "bedienung", "https://www.heizungsdiscount24.de/pdf/Wilo-Stratos-Pico-Plus-Betriebsanleitung.pdf"),
+    ],
+}
+
+
 def slug(text: str) -> str:
     t = text.lower()
     for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
@@ -763,6 +879,8 @@ def slug(text: str) -> str:
 
 def main() -> int:
     cat_ids = {c[0] for c in CATEGORIES}
+    DOC_TYPES = {"bedienung": "Bedienungsanleitung", "montage": "Montageanleitung", "service": "Serviceanleitung",
+                 "planung": "Planungsanleitung", "datenblatt": "Datenblatt", "ersatzteile": "Ersatzteilliste"}
     out_manufacturers = []
     seen = set()
     for m in MANUFACTURERS:
@@ -777,9 +895,13 @@ def main() -> int:
                 print(f"Doppelte ID {sid}", file=sys.stderr)
                 return 1
             seen.add(sid)
+            documents = [
+                {"title": t, "type": DOC_TYPES[ty], "url": quote(u, safe=":/?&=%#~+")}
+                for t, ty, u in DOCS.pop((m["name"], name), [])
+            ]
             series.append({
                 "id": sid, "name": name, "category": cat,
-                "models": models, "keywords": keywords, "documents": [],
+                "models": models, "keywords": keywords, "documents": documents,
             })
         out_manufacturers.append({
             "id": mid, "name": m["name"], "group": m["group"], "info": m["info"],
@@ -787,6 +909,9 @@ def main() -> int:
             "docPortalNote": m["docPortalNote"], "searchDomains": m["domains"],
             "color": m["color"], "series": series,
         })
+    if DOCS:
+        print(f"DOCS-Einträge ohne passende Serie: {list(DOCS)}", file=sys.stderr)
+        return 1
     catalog = {
         "version": 1,
         "updated": CATALOG_UPDATED,
@@ -797,7 +922,8 @@ def main() -> int:
     }
     OUT.write_text(json.dumps(catalog, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     n_series = sum(len(m["series"]) for m in out_manufacturers)
-    print(f"{OUT.name}: {len(out_manufacturers)} Hersteller, {n_series} Serien")
+    n_docs = sum(len(s["documents"]) for m in out_manufacturers for s in m["series"])
+    print(f"{OUT.name}: {len(out_manufacturers)} Hersteller, {n_series} Serien, {n_docs} direkte Anleitungen")
     return 0
 
 

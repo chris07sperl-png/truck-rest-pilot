@@ -1,10 +1,27 @@
 import SwiftUI
 import PDFKit
 
-/// PDF-Ansicht mit Suche im Dokument, Seitensprung und Teilen.
+/// Offline gespeichertes Dokument anzeigen.
 struct PDFReaderView: View {
     @Environment(LibraryStore.self) private var library
     let documentID: UUID
+    var initialPage: Int?
+    var highlight: String?
+
+    var body: some View {
+        if let doc = library.document(documentID) {
+            PDFReaderCore(fileURL: library.fileURL(for: doc), title: doc.title,
+                          initialPage: initialPage, highlight: highlight)
+        } else {
+            ContentUnavailableView("Dokument nicht gefunden", systemImage: "doc.questionmark")
+        }
+    }
+}
+
+/// PDF-Ansicht mit Suche im Dokument, Seitensprung und Teilen – für lokale Dateien.
+struct PDFReaderCore: View {
+    let fileURL: URL
+    let title: String
     var initialPage: Int?
     var highlight: String?
 
@@ -16,17 +33,9 @@ struct PDFReaderView: View {
     @State private var jump: PDFJump?
 
     var body: some View {
-        if let doc = library.document(documentID) {
-            reader(doc)
-        } else {
-            ContentUnavailableView("Dokument nicht gefunden", systemImage: "doc.questionmark")
-        }
-    }
-
-    private func reader(_ doc: LocalDocument) -> some View {
         PDFKitView(document: pdf, highlights: matches, jump: jump, currentPage: $currentPage)
             .ignoresSafeArea(edges: .bottom)
-            .navigationTitle(doc.title)
+            .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Im Dokument suchen")
             .onSubmit(of: .search) { runSearch() }
@@ -53,11 +62,14 @@ struct PDFReaderView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    ShareLink(item: library.fileURL(for: doc)) { Image(systemName: "square.and.arrow.up") }
+                    ShareLink(item: fileURL) { Image(systemName: "square.and.arrow.up") }
                 }
             }
-            .task(id: doc.id) {
-                let url = library.fileURL(for: doc)
+            .overlay {
+                if pdf == nil { ProgressView() }
+            }
+            .task(id: fileURL) {
+                let url = fileURL
                 let loaded = await Task.detached { PDFDocument(url: url) }.value
                 pdf = loaded
                 if let highlight, !highlight.isEmpty {

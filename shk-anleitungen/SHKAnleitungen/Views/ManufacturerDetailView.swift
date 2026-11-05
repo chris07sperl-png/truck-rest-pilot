@@ -39,12 +39,8 @@ struct ManufacturerDetailView: View {
                             Label("Offizielles Dokumenten-Portal", systemImage: "books.vertical")
                         }
                     }
-                    Button {
-                        let q = DocSearch.query(manufacturer: m, series: nil, model: nil, type: nil) + " Anleitung"
-                        browser = BrowserLink(url: DocSearch.webURL(query: q, domains: m.searchDomains),
-                                              title: "\(m.name) PDFs", manufacturerID: m.id)
-                    } label: {
-                        Label("PDFs auf der Hersteller-Seite suchen", systemImage: "doc.text.magnifyingglass")
+                    NavigationLink(value: Route.documentSearch(manufacturerID: m.id, seriesID: nil, model: nil, docType: nil)) {
+                        Label("Anleitungen von \(m.name) suchen", systemImage: "doc.text.magnifyingglass")
                     }
                     Link(destination: m.website) {
                         Label(m.website.host() ?? "Webseite", systemImage: "safari")

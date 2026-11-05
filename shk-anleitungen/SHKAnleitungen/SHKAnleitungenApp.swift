@@ -24,6 +24,8 @@ enum Route: Hashable {
     case document(UUID, page: Int?, highlight: String?)
     case installation(UUID)
     case device(UUID, installation: UUID)
+    case remotePDF(RemoteDoc)
+    case documentSearch(manufacturerID: String?, seriesID: String?, model: String?, docType: DocType?, freeQuery: String? = nil)
 }
 
 struct ContentView: View {
@@ -56,6 +58,9 @@ extension View {
             case .document(let id, let page, let highlight): PDFReaderView(documentID: id, initialPage: page, highlight: highlight)
             case .installation(let id): InstallationDetailView(installationID: id)
             case .device(let id, let installationID): DeviceDetailView(deviceID: id, installationID: installationID)
+            case .remotePDF(let doc): RemotePDFView(doc: doc)
+            case .documentSearch(let mid, let sid, let model, let type, let free):
+                DocumentSearchView(manufacturerID: mid, seriesID: sid, model: model, docType: type, freeQuery: free)
             }
         }
     }

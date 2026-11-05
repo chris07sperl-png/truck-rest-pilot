@@ -80,10 +80,9 @@ struct SearchView: View {
                 }
 
                 Section {
-                    Button {
-                        browser = BrowserLink(url: DocSearch.webURL(query: "\(trimmed) Anleitung"), title: "Websuche")
-                    } label: {
-                        Label("„\(trimmed)“ im Internet suchen (PDF)", systemImage: "globe")
+                    NavigationLink(value: Route.documentSearch(manufacturerID: nil, seriesID: nil, model: nil,
+                                                               docType: nil, freeQuery: trimmed)) {
+                        Label("Anleitungen zu „\(trimmed)“ im Internet finden", systemImage: "doc.text.magnifyingglass")
                     }
                 }
             }
