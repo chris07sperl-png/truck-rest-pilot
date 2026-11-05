@@ -1,0 +1,25 @@
+name: SHK Anleitungen iOS Build
+
+on:
+  push:
+    paths:
+      - "shk-anleitungen/**"
+      - ".github/workflows/shk-anleitungen-ios.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Katalog prüfen
+        run: python3 shk-anleitungen/tools/build_catalog.py && git diff --exit-code -- shk-anleitungen/SHKAnleitungen/Resources/catalog.json || echo "::warning::catalog.json ist nicht aktuell – tools/build_catalog.py ausführen"
+      - name: Xcode-Version
+        run: xcodebuild -version
+      - name: Build für iOS-Simulator (ohne Signatur)
+        working-directory: shk-anleitungen
+        run: |
+          xcodebuild -project SHKAnleitungen.xcodeproj -target SHKAnleitungen \
+            -sdk iphonesimulator -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | grep -E "error:|warning:|BUILD (SUCCEEDED|FAILED)"
+          exit ${PIPESTATUS[0]}

@@ -1,0 +1,3344 @@
+{
+ "version": 1,
+ "updated": "2026-11-05",
+ "categories": [
+  {
+   "id": "gas",
+   "name": "Gas-Heizung",
+   "symbol": "flame",
+   "synonyms": [
+    "gastherme",
+    "therme",
+    "brennwert",
+    "gasbrennwert",
+    "wandgerät",
+    "kessel",
+    "gaskessel"
+   ]
+  },
+  {
+   "id": "oel",
+   "name": "Öl-Heizung",
+   "symbol": "drop.fill",
+   "synonyms": [
+    "öl",
+    "oel",
+    "ölbrennwert",
+    "ölkessel",
+    "heizöl"
+   ]
+  },
+  {
+   "id": "wp",
+   "name": "Wärmepumpe",
+   "symbol": "fan",
+   "synonyms": [
+    "wärmepumpe",
+    "wp",
+    "luft-wasser",
+    "sole-wasser",
+    "erdwärme",
+    "monoblock",
+    "split",
+    "inverter"
+   ]
+  },
+  {
+   "id": "holz",
+   "name": "Holz & Pellets",
+   "symbol": "leaf",
+   "synonyms": [
+    "pellet",
+    "pellets",
+    "holz",
+    "scheitholz",
+    "hackgut",
+    "biomasse"
+   ]
+  },
+  {
+   "id": "brenner",
+   "name": "Brenner",
+   "symbol": "flame.fill",
+   "synonyms": [
+    "brenner",
+    "ölbrenner",
+    "gasbrenner",
+    "gebläsebrenner",
+    "zweistoff"
+   ]
+  },
+  {
+   "id": "regelung",
+   "name": "Regelung & Smart Home",
+   "symbol": "dial.medium",
+   "synonyms": [
+    "regler",
+    "regelung",
+    "thermostat",
+    "bedienmodul",
+    "app",
+    "gateway",
+    "smart home",
+    "raumregler",
+    "fernbedienung"
+   ]
+  },
+  {
+   "id": "speicher",
+   "name": "Speicher & Warmwasser",
+   "symbol": "cylinder",
+   "synonyms": [
+    "speicher",
+    "warmwasser",
+    "trinkwasser",
+    "puffer",
+    "pufferspeicher",
+    "boiler",
+    "frischwasser"
+   ]
+  },
+  {
+   "id": "solar",
+   "name": "Solarthermie",
+   "symbol": "sun.max",
+   "synonyms": [
+    "solar",
+    "kollektor",
+    "flachkollektor",
+    "röhrenkollektor",
+    "solarstation"
+   ]
+  },
+  {
+   "id": "lueftung",
+   "name": "Lüftung",
+   "symbol": "wind",
+   "synonyms": [
+    "lüftung",
+    "wohnraumlüftung",
+    "kwl",
+    "wärmerückgewinnung",
+    "lüftungsgerät"
+   ]
+  },
+  {
+   "id": "klima",
+   "name": "Klima",
+   "symbol": "snowflake",
+   "synonyms": [
+    "klima",
+    "klimagerät",
+    "klimaanlage",
+    "kälte",
+    "multisplit",
+    "split"
+   ]
+  },
+  {
+   "id": "pumpe",
+   "name": "Pumpen & Hebeanlagen",
+   "symbol": "arrow.triangle.2.circlepath",
+   "synonyms": [
+    "pumpe",
+    "umwälzpumpe",
+    "heizungspumpe",
+    "zirkulation",
+    "hebeanlage",
+    "druckerhöhung"
+   ]
+  },
+  {
+   "id": "armatur",
+   "name": "Armaturen & Ventile",
+   "symbol": "slider.horizontal.3",
+   "synonyms": [
+    "ventil",
+    "thermostatventil",
+    "strangregulierventil",
+    "druckminderer",
+    "filter",
+    "rückspülfilter",
+    "mischer",
+    "hydraulischer abgleich"
+   ]
+  },
+  {
+   "id": "sanitaer",
+   "name": "Sanitär",
+   "symbol": "shower",
+   "synonyms": [
+    "sanitär",
+    "wc",
+    "spülkasten",
+    "vorwand",
+    "dusche",
+    "armatur",
+    "waschtisch",
+    "unterputz",
+    "installationssystem",
+    "rohr"
+   ]
+  },
+  {
+   "id": "heizflaeche",
+   "name": "Heizkörper & Fußbodenheizung",
+   "symbol": "heater.vertical",
+   "synonyms": [
+    "heizkörper",
+    "fußbodenheizung",
+    "flächenheizung",
+    "verteiler",
+    "konvektor"
+   ]
+  },
+  {
+   "id": "elektro",
+   "name": "Elektro-Warmwasser",
+   "symbol": "bolt",
+   "synonyms": [
+    "durchlauferhitzer",
+    "elektrospeicher",
+    "kleinspeicher",
+    "warmwasser elektrisch"
+   ]
+  }
+ ],
+ "manufacturers": [
+  {
+   "id": "viessmann",
+   "name": "Viessmann",
+   "group": "Heiztechnik",
+   "info": "Gas- und Öl-Brennwert, Wärmepumpen, Regelungen (Vitotronic, ViCare).",
+   "website": "https://www.viessmann.de",
+   "docPortal": "https://www.viessmann.de/de/services/bedienungsanleitungen.html",
+   "docPortalNote": "Anleitungen als PDF in der ViBooks-Datenbank. Fachpartner-Unterlagen nach Login.",
+   "searchDomains": [
+    "viessmann.de",
+    "viessmann.com"
+   ],
+   "color": "#FF4F00",
+   "series": [
+    {
+     "id": "viessmann.vitodens-050-w",
+     "name": "Vitodens 050-W",
+     "category": "gas",
+     "models": [
+      "B0HA",
+      "B0KA"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-100-w",
+     "name": "Vitodens 100-W",
+     "category": "gas",
+     "models": [
+      "B1HF",
+      "B1KF",
+      "B1HE",
+      "B1KE"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-111-w",
+     "name": "Vitodens 111-W",
+     "category": "gas",
+     "models": [
+      "B1LF",
+      "B1LE"
+     ],
+     "keywords": [
+      "kompakt",
+      "speicher integriert"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-200-w",
+     "name": "Vitodens 200-W",
+     "category": "gas",
+     "models": [
+      "B2HF",
+      "B2KF",
+      "B2HE",
+      "B2KE",
+      "B2HA"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-222-f",
+     "name": "Vitodens 222-F",
+     "category": "gas",
+     "models": [
+      "B2TF",
+      "B2SF",
+      "B2TE",
+      "B2SE"
+     ],
+     "keywords": [
+      "kompakt"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-222-w",
+     "name": "Vitodens 222-W",
+     "category": "gas",
+     "models": [
+      "B2LF",
+      "B2LE"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-300-w",
+     "name": "Vitodens 300-W",
+     "category": "gas",
+     "models": [
+      "B3HF",
+      "B3HE",
+      "B3HA"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitodens-333-f",
+     "name": "Vitodens 333-F",
+     "category": "gas",
+     "models": [
+      "B3TF",
+      "B3SF",
+      "B3TE"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocrossal-100-200-300",
+     "name": "Vitocrossal 100 / 200 / 300",
+     "category": "gas",
+     "models": [
+      "CI1",
+      "CU3A",
+      "CR3B",
+      "CM2"
+     ],
+     "keywords": [
+      "gewerbe",
+      "großkessel"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitoladens-300-c-300-t",
+     "name": "Vitoladens 300-C / 300-T",
+     "category": "oel",
+     "models": [
+      "J3RA",
+      "VW3B"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitola-200",
+     "name": "Vitola 200",
+     "category": "oel",
+     "models": [
+      "VB2A"
+     ],
+     "keywords": [
+      "niedertemperatur"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-060-a",
+     "name": "Vitocal 060-A",
+     "category": "wp",
+     "models": [
+      "T0E",
+      "T0S"
+     ],
+     "keywords": [
+      "warmwasser-wärmepumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-100-s-111-s",
+     "name": "Vitocal 100-S / 111-S",
+     "category": "wp",
+     "models": [
+      "AWB",
+      "AWBT"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-150-a-151-a",
+     "name": "Vitocal 150-A / 151-A",
+     "category": "wp",
+     "models": [
+      "AWO-M-E",
+      "AWOT-M-E"
+     ],
+     "keywords": [
+      "propan",
+      "r290"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-200-s-222-s",
+     "name": "Vitocal 200-S / 222-S",
+     "category": "wp",
+     "models": [
+      "AWB-E",
+      "AWBT-E"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-250-a-252-a",
+     "name": "Vitocal 250-A / 252-A",
+     "category": "wp",
+     "models": [
+      "AWO-E-AC",
+      "HAWO-AC",
+      "AWOT-E-AC"
+     ],
+     "keywords": [
+      "propan",
+      "r290"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-250-s",
+     "name": "Vitocal 250-S",
+     "category": "wp",
+     "models": [
+      "AWB-AC"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-300-g-333-g",
+     "name": "Vitocal 300-G / 333-G",
+     "category": "wp",
+     "models": [
+      "BW",
+      "BWT",
+      "BWC"
+     ],
+     "keywords": [
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocal-262-a",
+     "name": "Vitocal 262-A",
+     "category": "wp",
+     "models": [
+      "T2E"
+     ],
+     "keywords": [
+      "warmwasser-wärmepumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitoligno-300-c",
+     "name": "Vitoligno 300-C",
+     "category": "holz",
+     "models": [
+      "VL3C"
+     ],
+     "keywords": [
+      "pelletkessel"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitotronic-100-200-300",
+     "name": "Vitotronic 100 / 200 / 300",
+     "category": "regelung",
+     "models": [
+      "HC1B",
+      "HO1B",
+      "KO2B",
+      "GW6B"
+     ],
+     "keywords": [
+      "kesselregelung"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitotrol-100-200-300",
+     "name": "Vitotrol 100 / 200 / 300",
+     "category": "regelung",
+     "models": [
+      "UTDB",
+      "200-E",
+      "300-E"
+     ],
+     "keywords": [
+      "raumthermostat",
+      "fernbedienung"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitoconnect-vicare",
+     "name": "Vitoconnect / ViCare",
+     "category": "regelung",
+     "models": [
+      "OPTO2",
+      "OT2",
+      "100"
+     ],
+     "keywords": [
+      "wlan",
+      "internet"
+     ],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitocell-100-300",
+     "name": "Vitocell 100 / 300",
+     "category": "speicher",
+     "models": [
+      "100-V",
+      "100-W",
+      "100-B",
+      "100-E",
+      "300-V",
+      "300-B"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitosol-100-200-300",
+     "name": "Vitosol 100 / 200 / 300",
+     "category": "solar",
+     "models": [
+      "100-FM",
+      "200-FM",
+      "300-TM",
+      "200-TM"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "viessmann.vitovent-200-300",
+     "name": "Vitovent 200 / 300",
+     "category": "lueftung",
+     "models": [
+      "200-C",
+      "200-W",
+      "300-W",
+      "300-F"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "wolf",
+   "name": "Wolf",
+   "group": "Heiztechnik",
+   "info": "Brennwerttechnik, Wärmepumpen, Wohnraumlüftung und Regelungen.",
+   "website": "https://www.wolf.eu/de-de",
+   "docPortal": "https://www.wolf.eu/de-de/professional/downloads",
+   "docPortalNote": "Montage- und Bedienungsanleitungen im WOLF Downloadbereich für Fachpartner.",
+   "searchDomains": [
+    "wolf.eu",
+    "wolf-heiztechnik.de"
+   ],
+   "color": "#D0021B",
+   "series": [
+    {
+     "id": "wolf.cgb-2-cgb-2k",
+     "name": "CGB-2 / CGB-2K",
+     "category": "gas",
+     "models": [
+      "CGB-2-14",
+      "CGB-2-20",
+      "CGB-2-24",
+      "CGB-2K-20",
+      "CGB-2K-24"
+     ],
+     "keywords": [
+      "kombitherme"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.fgb-fgb-k",
+     "name": "FGB / FGB-K",
+     "category": "gas",
+     "models": [
+      "FGB-24",
+      "FGB-28",
+      "FGB-35",
+      "FGB-K-28",
+      "FGB-K-35"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "wolf.tgb-2",
+     "name": "TGB-2",
+     "category": "gas",
+     "models": [
+      "TGB-2-20",
+      "TGB-2-24",
+      "TGB-2-35"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "wolf.cgs-2-cgw-2-csz-2",
+     "name": "CGS-2 / CGW-2 / CSZ-2",
+     "category": "gas",
+     "models": [
+      "CGS-2",
+      "CGW-2",
+      "CSZ-2"
+     ],
+     "keywords": [
+      "schichtenspeicher",
+      "kompakt"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.mgk-2-mgk-130",
+     "name": "MGK-2 / MGK-130",
+     "category": "gas",
+     "models": [
+      "MGK-2-170",
+      "MGK-2-250",
+      "MGK-2-390",
+      "MGK-2-630",
+      "MGK-130"
+     ],
+     "keywords": [
+      "gewerbe",
+      "großkessel"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.cob-2-tob",
+     "name": "COB-2 / TOB",
+     "category": "oel",
+     "models": [
+      "COB-2-15",
+      "COB-2-20",
+      "COB-2-29",
+      "TOB-18",
+      "TOB-24"
+     ],
+     "keywords": [
+      "ölbrennwert"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.cha-monoblock",
+     "name": "CHA-Monoblock",
+     "category": "wp",
+     "models": [
+      "CHA-07/400V",
+      "CHA-10/400V",
+      "CHA-16/400V"
+     ],
+     "keywords": [
+      "propan",
+      "r290"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.chc-monoblock-chc-split",
+     "name": "CHC-Monoblock / CHC-Split",
+     "category": "wp",
+     "models": [
+      "CHC-Monoblock",
+      "CHC-Split"
+     ],
+     "keywords": [
+      "kompaktzentrale"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.fha-monoblock",
+     "name": "FHA-Monoblock",
+     "category": "wp",
+     "models": [
+      "FHA-05/06",
+      "FHA-08/10",
+      "FHA-11/14",
+      "FHA-17/20"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "wolf.bwl-1s-bwl-1-bws-1",
+     "name": "BWL-1S / BWL-1 / BWS-1",
+     "category": "wp",
+     "models": [
+      "BWL-1S-07",
+      "BWL-1S-10",
+      "BWL-1S-14",
+      "BWL-1-08",
+      "BWL-1-12",
+      "BWS-1-06",
+      "BWS-1-10"
+     ],
+     "keywords": [
+      "split"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.wpm-1-wpm-2-waermepumpenmanager",
+     "name": "WPM-1 / WPM-2 Wärmepumpenmanager",
+     "category": "regelung",
+     "models": [
+      "WPM-1",
+      "WPM-2"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "wolf.bedienmodul-bm-2-am",
+     "name": "Bedienmodul BM-2 / AM",
+     "category": "regelung",
+     "models": [
+      "BM-2",
+      "AM",
+      "BM"
+     ],
+     "keywords": [
+      "bedienmodul",
+      "anzeigemodul"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.mischermodul-mm-2-kaskadenmodul-km-2",
+     "name": "Mischermodul MM-2 / Kaskadenmodul KM-2",
+     "category": "regelung",
+     "models": [
+      "MM-2",
+      "KM-2",
+      "KM"
+     ],
+     "keywords": [
+      "mischer",
+      "kaskade"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.solarmodul-sm1-2-sm2-2",
+     "name": "Solarmodul SM1-2 / SM2-2",
+     "category": "regelung",
+     "models": [
+      "SM1-2",
+      "SM2-2"
+     ],
+     "keywords": [
+      "solarregler"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.wolf-link-ism7",
+     "name": "WOLF Link / ISM7",
+     "category": "regelung",
+     "models": [
+      "WOLF Link home",
+      "WOLF Link pro",
+      "ISM7i",
+      "ISM7e"
+     ],
+     "keywords": [
+      "smartset",
+      "lan",
+      "wlan",
+      "app"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.sew-sem-bsp-speicher",
+     "name": "SEW / SEM / BSP Speicher",
+     "category": "speicher",
+     "models": [
+      "SEW-1",
+      "SEW-2",
+      "SEM-1",
+      "SEM-2",
+      "BSP",
+      "SPU-2"
+     ],
+     "keywords": [
+      "pufferspeicher"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.crk-12-topson-f3-1-cfk-1",
+     "name": "CRK-12 / TopSon F3-1 / CFK-1",
+     "category": "solar",
+     "models": [
+      "CRK-12",
+      "TopSon F3-1",
+      "CFK-1"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "wolf.cwl-excellent-cwl-2",
+     "name": "CWL Excellent / CWL-2",
+     "category": "lueftung",
+     "models": [
+      "CWL-180",
+      "CWL-300",
+      "CWL-400",
+      "CWL-2-225",
+      "CWL-2-325",
+      "CWL-2-400"
+     ],
+     "keywords": [
+      "wohnraumlüftung"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.cwl-f-cwl-d",
+     "name": "CWL-F / CWL-D",
+     "category": "lueftung",
+     "models": [
+      "CWL-F-150",
+      "CWL-F-300",
+      "CWL-D-70"
+     ],
+     "keywords": [
+      "dezentral"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wolf.cfl-wt-kg-top",
+     "name": "CFL WT / KG Top",
+     "category": "lueftung",
+     "models": [
+      "CFL-WT",
+      "KG Top"
+     ],
+     "keywords": [
+      "klimagerät",
+      "rlt"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "weishaupt",
+   "name": "Weishaupt",
+   "group": "Heiztechnik",
+   "info": "Öl- und Gasbrenner, Brennwertkessel Thermo Condens, Wärmepumpen.",
+   "website": "https://www.weishaupt.de",
+   "docPortal": "https://www.weishaupt.de/suche",
+   "docPortalNote": "Dokumente über die Suche auf weishaupt.de. Nach exakter Typbezeichnung vom Typenschild suchen.",
+   "searchDomains": [
+    "weishaupt.de",
+    "weishaupt.ch",
+    "weishaupt.at"
+   ],
+   "color": "#E2001A",
+   "series": [
+    {
+     "id": "weishaupt.oelbrenner-wl5-wl10-wl20-wl30",
+     "name": "Ölbrenner WL5 / WL10 / WL20 / WL30",
+     "category": "brenner",
+     "models": [
+      "WL5/1-B",
+      "WL5-PB-H",
+      "WL10/2-D",
+      "WL20",
+      "WL30"
+     ],
+     "keywords": [
+      "purflam"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.gasbrenner-wg5-wg10-wg20-wg30-wg40",
+     "name": "Gasbrenner WG5 / WG10 / WG20 / WG30 / WG40",
+     "category": "brenner",
+     "models": [
+      "WG5/1-A",
+      "WG10",
+      "WG20",
+      "WG30",
+      "WG40/1-A"
+     ],
+     "keywords": [
+      "ln",
+      "low nox"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.monarch-wm-l-wm-g-wm-gl",
+     "name": "monarch WM-L / WM-G / WM-GL",
+     "category": "brenner",
+     "models": [
+      "WM-L10",
+      "WM-L20",
+      "WM-G10",
+      "WM-G20",
+      "WM-GL10",
+      "WM-GL20"
+     ],
+     "keywords": [
+      "zweistoffbrenner",
+      "industrie"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.thermo-condens-wtc-gw",
+     "name": "Thermo Condens WTC-GW",
+     "category": "gas",
+     "models": [
+      "WTC-GW 15-B",
+      "WTC-GW 25-B",
+      "WTC-GW 32-B"
+     ],
+     "keywords": [
+      "gas-brennwert"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.thermo-condens-wtc-gb",
+     "name": "Thermo Condens WTC-GB",
+     "category": "gas",
+     "models": [
+      "WTC-GB 60-A",
+      "WTC-GB 90-A",
+      "WTC-GB 120-A",
+      "WTC-GB 170-A",
+      "WTC-GB 250-A",
+      "WTC-GB 300-A"
+     ],
+     "keywords": [
+      "bodenstehend"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.thermo-condens-wtc-ob",
+     "name": "Thermo Condens WTC-OB",
+     "category": "oel",
+     "models": [
+      "WTC-OB 15-A",
+      "WTC-OB 25-A",
+      "WTC-OB 35-A"
+     ],
+     "keywords": [
+      "öl-brennwert"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.luft-wasser-waermepumpen-wwp-l-wbb",
+     "name": "Luft/Wasser-Wärmepumpen WWP L / WBB",
+     "category": "wp",
+     "models": [
+      "WWP L 26 I-2",
+      "WWP LB",
+      "WBB 12",
+      "WBB 20"
+     ],
+     "keywords": [
+      "biblock"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.sole-wasser-waermepumpen-wwp-s",
+     "name": "Sole/Wasser-Wärmepumpen WWP S",
+     "category": "wp",
+     "models": [
+      "WWP S 10 ID",
+      "WWP S 15 ID",
+      "WWP S 18 ID"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.waermepumpen-wwp-t",
+     "name": "Wärmepumpen WWP T",
+     "category": "wp",
+     "models": [
+      "WWP T 290 F",
+      "WWP T 290 FW2A"
+     ],
+     "keywords": [
+      "warmwasser-wärmepumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.waermetauscher-speicher-wtu",
+     "name": "Wärmetauscher-Speicher WTU",
+     "category": "speicher",
+     "models": [
+      "WTU 20-S",
+      "WTU 30-S",
+      "WTU 50-S",
+      "WTU 55-S"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.regelung-wcm-wem",
+     "name": "Regelung WCM / WEM",
+     "category": "regelung",
+     "models": [
+      "WCM-CPU",
+      "WCM-FS",
+      "WCM-EM",
+      "WEM-EM-HK",
+      "WEM-EM-WW"
+     ],
+     "keywords": [
+      "fernbedienstation",
+      "erweiterungsmodul"
+     ],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.speicher-was-was-sol",
+     "name": "Speicher WAS / WAS Sol",
+     "category": "speicher",
+     "models": [
+      "WAS 70 Bloc-Eco",
+      "WAS 150",
+      "WAS 200",
+      "WAS Sol 400"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "weishaupt.solarkollektoren-wts-f",
+     "name": "Solarkollektoren WTS-F",
+     "category": "solar",
+     "models": [
+      "WTS-F2"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "buderus",
+   "name": "Buderus",
+   "group": "Heiztechnik",
+   "info": "Logamax, Logano, Logatherm, Logamatic – Teil von Bosch Home Comfort.",
+   "website": "https://www.buderus.de",
+   "docPortal": null,
+   "docPortalNote": "Fachkunden-Unterlagen nach Login auf buderus.de.",
+   "searchDomains": [
+    "buderus.de",
+    "bosch-homecomfort.com"
+   ],
+   "color": "#003B6F",
+   "series": [
+    {
+     "id": "buderus.logamax-plus-gb172i-gb182i-gb192i",
+     "name": "Logamax plus GB172i / GB182i / GB192i",
+     "category": "gas",
+     "models": [
+      "GB172i",
+      "GB172i.2",
+      "GB182i",
+      "GB182i.2",
+      "GB192i",
+      "GB192i.2"
+     ],
+     "keywords": [
+      "wandgerät"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logamax-plus-gb162-gb062",
+     "name": "Logamax plus GB162 / GB062",
+     "category": "gas",
+     "models": [
+      "GB162-50",
+      "GB162-85",
+      "GB162-100",
+      "GB062"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "buderus.logano-plus-kb192i-kb195i",
+     "name": "Logano plus KB192i / KB195i",
+     "category": "gas",
+     "models": [
+      "KB192i",
+      "KB192i.2",
+      "KB195i"
+     ],
+     "keywords": [
+      "bodenstehend"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logano-plus-gb125-g125",
+     "name": "Logano plus GB125 / G125",
+     "category": "oel",
+     "models": [
+      "GB125",
+      "G125",
+      "GB145"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "buderus.logatherm-wlw196i-wlw186i-wlw176i",
+     "name": "Logatherm WLW196i / WLW186i / WLW176i",
+     "category": "wp",
+     "models": [
+      "WLW196i AR",
+      "WLW196i IR",
+      "WLW186i AR",
+      "WLW176i AR"
+     ],
+     "keywords": [
+      "luft-wasser"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logatherm-wsw196i-wsw186i",
+     "name": "Logatherm WSW196i / WSW186i",
+     "category": "wp",
+     "models": [
+      "WSW196i",
+      "WSW186i"
+     ],
+     "keywords": [
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logatherm-wpl-ar-wps",
+     "name": "Logatherm WPL AR / WPS",
+     "category": "wp",
+     "models": [
+      "WPL 7 AR",
+      "WPL 10 AR",
+      "WPS 6",
+      "WPS 10"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "buderus.logamatic-rc310-rc220-rc200-rc100",
+     "name": "Logamatic RC310 / RC220 / RC200 / RC100",
+     "category": "regelung",
+     "models": [
+      "RC310",
+      "RC220",
+      "RC200",
+      "RC100",
+      "BC400"
+     ],
+     "keywords": [
+      "bedieneinheit",
+      "ems plus"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logamatic-hmc300-bc10-mc110",
+     "name": "Logamatic HMC300 / BC10 / MC110",
+     "category": "regelung",
+     "models": [
+      "HMC300",
+      "BC10",
+      "MC110",
+      "MM100",
+      "SM100"
+     ],
+     "keywords": [
+      "kesselregelung"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logamatic-5000-4000",
+     "name": "Logamatic 5000 / 4000",
+     "category": "regelung",
+     "models": [
+      "5311",
+      "5313",
+      "4323"
+     ],
+     "keywords": [
+      "gewerbe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.mx300-gateway-mydevice-app",
+     "name": "MX300 Gateway / MyDevice App",
+     "category": "regelung",
+     "models": [
+      "MX300",
+      "MX400",
+      "KM200"
+     ],
+     "keywords": [
+      "internet",
+      "app"
+     ],
+     "documents": []
+    },
+    {
+     "id": "buderus.logalux-su-sm-pnr-l",
+     "name": "Logalux SU / SM / PNR / L",
+     "category": "speicher",
+     "models": [
+      "SU160",
+      "SU200",
+      "SU300/5",
+      "SM300",
+      "SM400",
+      "PNR500",
+      "L135"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "buderus.logasol-skn-skt",
+     "name": "Logasol SKN / SKT",
+     "category": "solar",
+     "models": [
+      "SKN4.0",
+      "SKT1.0"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "buderus.logavent-hrv",
+     "name": "Logavent HRV",
+     "category": "lueftung",
+     "models": [
+      "HRV156",
+      "HRV176"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "vaillant",
+   "name": "Vaillant",
+   "group": "Heiztechnik",
+   "info": "ecoTEC, aroTHERM, flexoTHERM, sensoCOMFORT und Warmwassertechnik.",
+   "website": "https://www.vaillant.de",
+   "docPortal": null,
+   "docPortalNote": "Dokumente auf vaillant.de und im FachpartnerNET.",
+   "searchDomains": [
+    "vaillant.de",
+    "vaillant.com"
+   ],
+   "color": "#00917E",
+   "series": [
+    {
+     "id": "vaillant.ecotec-plus",
+     "name": "ecoTEC plus",
+     "category": "gas",
+     "models": [
+      "VC 15CS/1-5",
+      "VC 20CS/1-5",
+      "VC 25CS/1-5",
+      "VCW 26CS/1-5",
+      "VC 206/5-5"
+     ],
+     "keywords": [
+      "kombitherme"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.ecotec-pure-exclusive",
+     "name": "ecoTEC pure / exclusive",
+     "category": "gas",
+     "models": [
+      "VCW 236/7-2",
+      "VC 20CS/1-7",
+      "VC 30CS/1-7"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "vaillant.ecocompact",
+     "name": "ecoCOMPACT",
+     "category": "gas",
+     "models": [
+      "VSC 206/4-5",
+      "VSC 266/4-5"
+     ],
+     "keywords": [
+      "kompakt"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.ecovit-exclusiv-ecocraft-exclusiv",
+     "name": "ecoVIT exclusiv / ecoCRAFT exclusiv",
+     "category": "gas",
+     "models": [
+      "VKK 226/4",
+      "VKK 286/4",
+      "VKK 806/3-E"
+     ],
+     "keywords": [
+      "bodenstehend",
+      "gewerbe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.icovit-exclusiv",
+     "name": "icoVIT exclusiv",
+     "category": "oel",
+     "models": [
+      "VKO 246/3-7",
+      "VKO 356/3-7"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "vaillant.arotherm-plus",
+     "name": "aroTHERM plus",
+     "category": "wp",
+     "models": [
+      "VWL 35/6 A",
+      "VWL 55/6 A",
+      "VWL 75/6 A",
+      "VWL 105/6 A",
+      "VWL 125/6 A"
+     ],
+     "keywords": [
+      "propan",
+      "r290",
+      "monoblock"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.arotherm-split-split-plus",
+     "name": "aroTHERM Split / Split plus",
+     "category": "wp",
+     "models": [
+      "VWL 55/5 AS",
+      "VWL 75/5 AS",
+      "VWL 125/5 AS"
+     ],
+     "keywords": [
+      "split"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.flexotherm-exclusive-flexocompact-exclusive",
+     "name": "flexoTHERM exclusive / flexoCOMPACT exclusive",
+     "category": "wp",
+     "models": [
+      "VWF 57/4",
+      "VWF 87/4",
+      "VWF 117/4",
+      "VWF 88/4"
+     ],
+     "keywords": [
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.unitower-hydraulikstation",
+     "name": "uniTOWER / Hydraulikstation",
+     "category": "wp",
+     "models": [
+      "VWL 58/5 IS",
+      "VWL 77/5 IS",
+      "VWZ MEH 97/6"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "vaillant.sensocomfort-vrc-720",
+     "name": "sensoCOMFORT VRC 720",
+     "category": "regelung",
+     "models": [
+      "VRC 720",
+      "VRC 720f",
+      "VR 70",
+      "VR 71"
+     ],
+     "keywords": [
+      "systemregler"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.multimatic-vrc-700-calormatic",
+     "name": "multiMATIC VRC 700 / calorMATIC",
+     "category": "regelung",
+     "models": [
+      "VRC 700",
+      "VRC 470",
+      "VRT 350",
+      "VRT 370"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "vaillant.sensohome-vrt-380",
+     "name": "sensoHOME / VRT 380",
+     "category": "regelung",
+     "models": [
+      "VRT 380",
+      "VRT 380f"
+     ],
+     "keywords": [
+      "raumthermostat"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.myvaillant-connect-vr-920-vr-940",
+     "name": "myVAILLANT connect / VR 920 / VR 940",
+     "category": "regelung",
+     "models": [
+      "VR 920",
+      "VR 921",
+      "VR 940f"
+     ],
+     "keywords": [
+      "internet",
+      "app"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.unistor-allstor-aurostor",
+     "name": "uniSTOR / allSTOR / auroSTOR",
+     "category": "speicher",
+     "models": [
+      "VIH R 200",
+      "VIH R 300",
+      "VPS 500",
+      "VIH S 300"
+     ],
+     "keywords": [
+      "pufferspeicher"
+     ],
+     "documents": []
+    },
+    {
+     "id": "vaillant.aurotherm",
+     "name": "auroTHERM",
+     "category": "solar",
+     "models": [
+      "VFK 145",
+      "VFK 155",
+      "VTK 1140"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "vaillant.recovair",
+     "name": "recoVAIR",
+     "category": "lueftung",
+     "models": [
+      "VAR 260/4",
+      "VAR 360/4"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "vaillant.electronicved-minived",
+     "name": "electronicVED / miniVED",
+     "category": "elektro",
+     "models": [
+      "VED E 18/8",
+      "VED E 21/8",
+      "VED H 3/3"
+     ],
+     "keywords": [
+      "durchlauferhitzer"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "bosch-junkers",
+   "name": "Bosch / Junkers",
+   "group": "Heiztechnik",
+   "info": "Condens, Compress, Cerapur und Regler (früher Junkers).",
+   "website": "https://www.bosch-homecomfort.com/de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "bosch-homecomfort.com",
+    "junkers.com"
+   ],
+   "color": "#ED0007",
+   "series": [
+    {
+     "id": "bosch-junkers.condens-9000i-w-7000i-w",
+     "name": "Condens 9000i W / 7000i W",
+     "category": "gas",
+     "models": [
+      "GC9000iW",
+      "GC7000iW",
+      "GC7000iWT"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.condens-5300i-wm-2300i-w",
+     "name": "Condens 5300i WM / 2300i W",
+     "category": "gas",
+     "models": [
+      "GC5300iWM",
+      "GC2300iW"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.cerapur-ceraclass-cerastar",
+     "name": "Cerapur / Ceraclass / Cerastar",
+     "category": "gas",
+     "models": [
+      "ZSB",
+      "ZWB",
+      "ZSR",
+      "ZWR",
+      "ZSC",
+      "ZWC"
+     ],
+     "keywords": [
+      "junkers"
+     ],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.compress-7400i-aw-6800i-aw",
+     "name": "Compress 7400i AW / 6800i AW",
+     "category": "wp",
+     "models": [
+      "CS7400iAW",
+      "CS6800iAW"
+     ],
+     "keywords": [
+      "luft-wasser"
+     ],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.compress-5800i-aw-3400i-aws",
+     "name": "Compress 5800i AW / 3400i AWS",
+     "category": "wp",
+     "models": [
+      "CS5800iAW",
+      "CS3400iAWS"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.compress-7000-6000-lw",
+     "name": "Compress 7000 / 6000 LW",
+     "category": "wp",
+     "models": [
+      "CS7001iAW",
+      "CS6000AW"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.regler-cw-400-cr-400-cr-100-cr-10",
+     "name": "Regler CW 400 / CR 400 / CR 100 / CR 10",
+     "category": "regelung",
+     "models": [
+      "CW400",
+      "CW100",
+      "CR400",
+      "CR100",
+      "CR10"
+     ],
+     "keywords": [
+      "ems plus"
+     ],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.easycontrol-mx300",
+     "name": "EasyControl / MX300",
+     "category": "regelung",
+     "models": [
+      "CT200",
+      "MX300",
+      "MB LAN 2"
+     ],
+     "keywords": [
+      "app",
+      "smart home"
+     ],
+     "documents": []
+    },
+    {
+     "id": "bosch-junkers.tronic-heat-3500-3000",
+     "name": "Tronic Heat 3500 / 3000",
+     "category": "elektro",
+     "models": [
+      "TH3500",
+      "TH3000"
+     ],
+     "keywords": [
+      "elektroheizkessel"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "broetje",
+   "name": "Brötje",
+   "group": "Heiztechnik",
+   "info": "Gas-Brennwert, Wärmepumpen und ISR-Regelung für das Fachhandwerk.",
+   "website": "https://www.broetje.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "broetje.de"
+   ],
+   "color": "#E30613",
+   "series": [
+    {
+     "id": "broetje.wgb-evo-wgb-pro-evo",
+     "name": "WGB EVO / WGB Pro EVO",
+     "category": "gas",
+     "models": [
+      "WGB 15 I",
+      "WGB 20 I",
+      "WGB 28 I",
+      "WGB-K 20 I",
+      "WGB Pro 50"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "broetje.ecotherm-plus-ecocondens",
+     "name": "EcoTherm Plus / EcoCondens",
+     "category": "gas",
+     "models": [
+      "WGB 50",
+      "BBS EVO",
+      "BBK EVO"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "broetje.blw-neo-blw-split-k",
+     "name": "BLW NEO / BLW Split K",
+     "category": "wp",
+     "models": [
+      "BLW NEO 8",
+      "BLW NEO 12",
+      "BLW Split K 8"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "broetje.sensotherm-blw-bsw",
+     "name": "SensoTherm BLW / BSW",
+     "category": "wp",
+     "models": [
+      "BLW Sen",
+      "BSW NEO"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "broetje.isr-plus-ida",
+     "name": "ISR Plus / IDA",
+     "category": "regelung",
+     "models": [
+      "ISR Plus",
+      "IDA",
+      "RGT",
+      "QAA75"
+     ],
+     "keywords": [
+      "isr"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "remeha",
+   "name": "Remeha",
+   "group": "Heiztechnik",
+   "info": "Gas-Brennwert (Tzerra, Calenta, Quinta) und Regelung iSense/eTwist.",
+   "website": "https://www.remeha.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "remeha.de",
+    "remeha.com"
+   ],
+   "color": "#E3000F",
+   "series": [
+    {
+     "id": "remeha.tzerra-ace-calenta-ace",
+     "name": "Tzerra Ace / Calenta Ace",
+     "category": "gas",
+     "models": [
+      "Tzerra Ace 24",
+      "Calenta Ace 28",
+      "Calenta Ace 40C"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "remeha.quinta-ace",
+     "name": "Quinta Ace",
+     "category": "gas",
+     "models": [
+      "Quinta Ace 45",
+      "Quinta Ace 65",
+      "Quinta Ace 115",
+      "Quinta Ace 160"
+     ],
+     "keywords": [
+      "gewerbe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "remeha.gas-220-ace-gas-320-620-ace",
+     "name": "Gas 220 Ace / Gas 320/620 Ace",
+     "category": "gas",
+     "models": [
+      "Gas 220 Ace",
+      "Gas 320 Ace",
+      "Gas 620 Ace"
+     ],
+     "keywords": [
+      "bodenstehend"
+     ],
+     "documents": []
+    },
+    {
+     "id": "remeha.mercuria-ace-elga-ace",
+     "name": "Mercuria Ace / Elga Ace",
+     "category": "wp",
+     "models": [
+      "Mercuria Ace",
+      "Elga Ace"
+     ],
+     "keywords": [
+      "hybrid"
+     ],
+     "documents": []
+    },
+    {
+     "id": "remeha.etwist-isense",
+     "name": "eTwist / iSense",
+     "category": "regelung",
+     "models": [
+      "eTwist",
+      "iSense",
+      "SCB-10"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "elco",
+   "name": "Elco",
+   "group": "Heiztechnik",
+   "info": "Thision-Brennwertgeräte, Brenner Vectron, Wärmepumpen Aerotop.",
+   "website": "https://www.elco.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "elco.de",
+    "elco.net"
+   ],
+   "color": "#E2001A",
+   "series": [
+    {
+     "id": "elco.thision-s-plus-thision-mini",
+     "name": "Thision S Plus / Thision Mini",
+     "category": "gas",
+     "models": [
+      "Thision S Plus 13",
+      "Thision S Plus 19",
+      "Thision Mini"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "elco.straton-trigon",
+     "name": "Straton / Trigon",
+     "category": "gas",
+     "models": [
+      "Straton XL",
+      "Trigon XL"
+     ],
+     "keywords": [
+      "gewerbe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "elco.vectron-oel-und-gasbrenner",
+     "name": "Vectron Öl- und Gasbrenner",
+     "category": "brenner",
+     "models": [
+      "VL 1",
+      "VL 2",
+      "VG 1",
+      "VG 2",
+      "EK"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "elco.aerotop",
+     "name": "Aerotop",
+     "category": "wp",
+     "models": [
+      "Aerotop T",
+      "Aerotop S",
+      "Aerotop SX"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "elco.remocon",
+     "name": "Remocon",
+     "category": "regelung",
+     "models": [
+      "Remocon Net",
+      "Remocon Plus"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "hoval",
+   "name": "Hoval",
+   "group": "Heiztechnik",
+   "info": "UltraGas, Belaria, Thermalia und Regelung TopTronic E.",
+   "website": "https://www.hoval.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "hoval.de",
+    "hoval.com"
+   ],
+   "color": "#E3000F",
+   "series": [
+    {
+     "id": "hoval.ultragas-topgas",
+     "name": "UltraGas / TopGas",
+     "category": "gas",
+     "models": [
+      "UltraGas 15",
+      "UltraGas 2 (100)",
+      "TopGas comfort"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "hoval.ultraoil",
+     "name": "UltraOil",
+     "category": "oel",
+     "models": [
+      "UltraOil 16",
+      "UltraOil 25",
+      "UltraOil 35"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "hoval.belaria-pro-belaria-compact",
+     "name": "Belaria pro / Belaria compact",
+     "category": "wp",
+     "models": [
+      "Belaria pro comfort",
+      "Belaria compact IR"
+     ],
+     "keywords": [
+      "luft-wasser"
+     ],
+     "documents": []
+    },
+    {
+     "id": "hoval.thermalia",
+     "name": "Thermalia",
+     "category": "wp",
+     "models": [
+      "Thermalia comfort",
+      "Thermalia dual"
+     ],
+     "keywords": [
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "hoval.toptronic-e",
+     "name": "TopTronic E",
+     "category": "regelung",
+     "models": [
+      "TopTronic E",
+      "HovalConnect"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "hoval.combival-enerval",
+     "name": "CombiVal / EnerVal",
+     "category": "speicher",
+     "models": [
+      "CombiVal ER",
+      "CombiVal CR",
+      "EnerVal"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "hoval.homevent",
+     "name": "HomeVent",
+     "category": "lueftung",
+     "models": [
+      "HomeVent comfort FR"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "stiebel-eltron",
+   "name": "Stiebel Eltron",
+   "group": "Wärmepumpen & Klima",
+   "info": "Wärmepumpen, Lüftung und Elektro-Warmwasser.",
+   "website": "https://www.stiebel-eltron.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "stiebel-eltron.de",
+    "stiebel-eltron.com"
+   ],
+   "color": "#E30613",
+   "series": [
+    {
+     "id": "stiebel-eltron.wpl-a-wpl-25-hpa-o",
+     "name": "WPL-A / WPL 25 / HPA-O",
+     "category": "wp",
+     "models": [
+      "WPL-A 05 HK",
+      "WPL-A 07 HK",
+      "WPL 25 A",
+      "HPA-O 13 CS Premium"
+     ],
+     "keywords": [
+      "luft-wasser"
+     ],
+     "documents": []
+    },
+    {
+     "id": "stiebel-eltron.wpe-i-wpf-wpc",
+     "name": "WPE-I / WPF / WPC",
+     "category": "wp",
+     "models": [
+      "WPE-I 04 H",
+      "WPF 10",
+      "WPC 10"
+     ],
+     "keywords": [
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "stiebel-eltron.lwz-wwk",
+     "name": "LWZ / WWK",
+     "category": "wp",
+     "models": [
+      "LWZ 5 S",
+      "LWZ 8 CS",
+      "WWK 300 electronic"
+     ],
+     "keywords": [
+      "integralgerät",
+      "warmwasser-wärmepumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "stiebel-eltron.wpm-isg",
+     "name": "WPM / ISG",
+     "category": "regelung",
+     "models": [
+      "WPM",
+      "ISG web",
+      "ISG plus"
+     ],
+     "keywords": [
+      "wärmepumpenmanager",
+      "internet"
+     ],
+     "documents": []
+    },
+    {
+     "id": "stiebel-eltron.dhe-dhb-dce",
+     "name": "DHE / DHB / DCE",
+     "category": "elektro",
+     "models": [
+      "DHE Connect",
+      "DHB-E",
+      "DCE-X"
+     ],
+     "keywords": [
+      "durchlauferhitzer"
+     ],
+     "documents": []
+    },
+    {
+     "id": "stiebel-eltron.shz-psh-snu",
+     "name": "SHZ / PSH / SNU",
+     "category": "elektro",
+     "models": [
+      "SHZ 100 LCD",
+      "PSH 80 Classic",
+      "SNU 5 SL"
+     ],
+     "keywords": [
+      "elektrospeicher"
+     ],
+     "documents": []
+    },
+    {
+     "id": "stiebel-eltron.vlr-lwz-lueftung",
+     "name": "VLR / LWZ Lüftung",
+     "category": "lueftung",
+     "models": [
+      "VLR 70 L Trend",
+      "LWZ 280"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "daikin",
+   "name": "Daikin",
+   "group": "Wärmepumpen & Klima",
+   "info": "Altherma-Wärmepumpen und Klimageräte.",
+   "website": "https://www.daikin.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "daikin.de",
+    "daikin.eu"
+   ],
+   "color": "#0097E0",
+   "series": [
+    {
+     "id": "daikin.altherma-3-r-3-h-ht",
+     "name": "Altherma 3 R / 3 H HT",
+     "category": "wp",
+     "models": [
+      "ERGA-EV",
+      "EHVH",
+      "EPRA-ETV",
+      "ERRA"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "daikin.altherma-3-m-3-geo",
+     "name": "Altherma 3 M / 3 GEO",
+     "category": "wp",
+     "models": [
+      "EBLA",
+      "EDLA",
+      "EGSAH"
+     ],
+     "keywords": [
+      "monoblock",
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "daikin.altherma-rotex-hpsu",
+     "name": "Altherma ROTEX HPSU",
+     "category": "wp",
+     "models": [
+      "HPSU compact",
+      "HPU hybrid"
+     ],
+     "keywords": [
+      "rotex"
+     ],
+     "documents": []
+    },
+    {
+     "id": "daikin.klimageraete-perfera-stylish-emura",
+     "name": "Klimageräte Perfera / Stylish / Emura",
+     "category": "klima",
+     "models": [
+      "FTXM",
+      "FTXA",
+      "FTXJ",
+      "FTXTM"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "daikin.sensira-comfora",
+     "name": "Sensira / Comfora",
+     "category": "klima",
+     "models": [
+      "FTXF",
+      "FTXP"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "daikin.madoka-daikin-onecta",
+     "name": "Madoka / Daikin Onecta",
+     "category": "regelung",
+     "models": [
+      "BRC1H",
+      "Onecta"
+     ],
+     "keywords": [
+      "fernbedienung"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "mitsubishi-electric",
+   "name": "Mitsubishi Electric",
+   "group": "Wärmepumpen & Klima",
+   "info": "Ecodan-Wärmepumpen und Klimageräte.",
+   "website": "https://www.mitsubishi-les.com/de-de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "mitsubishi-les.com"
+   ],
+   "color": "#E60012",
+   "series": [
+    {
+     "id": "mitsubishi-electric.ecodan-monoblock-split",
+     "name": "Ecodan Monoblock / Split",
+     "category": "wp",
+     "models": [
+      "PUZ-WM",
+      "PUD-SHWM",
+      "SUZ-SWM",
+      "ERST20D"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "mitsubishi-electric.klimageraete-msz",
+     "name": "Klimageräte MSZ",
+     "category": "klima",
+     "models": [
+      "MSZ-AP",
+      "MSZ-LN",
+      "MSZ-EF",
+      "MSZ-HR"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "mitsubishi-electric.melcloud",
+     "name": "MELCloud",
+     "category": "regelung",
+     "models": [
+      "MAC-567IF",
+      "MELCloud"
+     ],
+     "keywords": [
+      "wlan"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "panasonic",
+   "name": "Panasonic",
+   "group": "Wärmepumpen & Klima",
+   "info": "Aquarea-Wärmepumpen und Etherea-Klimageräte.",
+   "website": "https://www.aircon.panasonic.eu/DE_de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "aircon.panasonic.eu",
+    "panasonic.com"
+   ],
+   "color": "#0041C0",
+   "series": [
+    {
+     "id": "panasonic.aquarea-generation-j-k-l",
+     "name": "Aquarea Generation J / K / L",
+     "category": "wp",
+     "models": [
+      "WH-MDC",
+      "WH-MXC",
+      "WH-ADC",
+      "WH-SDC"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "panasonic.etherea-tz",
+     "name": "Etherea / TZ",
+     "category": "klima",
+     "models": [
+      "CS-Z",
+      "CS-TZ"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "nibe",
+   "name": "NIBE",
+   "group": "Wärmepumpen & Klima",
+   "info": "Luft- und Erdwärmepumpen aus Schweden.",
+   "website": "https://www.nibe.eu/de-de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "nibe.eu",
+    "nibe.de"
+   ],
+   "color": "#E2001A",
+   "series": [
+    {
+     "id": "nibe.f2120-s2125",
+     "name": "F2120 / S2125",
+     "category": "wp",
+     "models": [
+      "F2120-8",
+      "F2120-12",
+      "S2125-8",
+      "S2125-12"
+     ],
+     "keywords": [
+      "luft-wasser"
+     ],
+     "documents": []
+    },
+    {
+     "id": "nibe.f1255-s1155-s1255",
+     "name": "F1255 / S1155 / S1255",
+     "category": "wp",
+     "models": [
+      "F1255-6",
+      "S1155-6",
+      "S1255-6"
+     ],
+     "keywords": [
+      "sole"
+     ],
+     "documents": []
+    },
+    {
+     "id": "nibe.smo-s40-vvm-s320",
+     "name": "SMO S40 / VVM S320",
+     "category": "regelung",
+     "models": [
+      "SMO S40",
+      "VVM S320",
+      "SMO 20"
+     ],
+     "keywords": [
+      "myuplink"
+     ],
+     "documents": []
+    },
+    {
+     "id": "nibe.f750-s735",
+     "name": "F750 / S735",
+     "category": "wp",
+     "models": [
+      "F750",
+      "S735"
+     ],
+     "keywords": [
+      "abluft"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "froeling",
+   "name": "Fröling",
+   "group": "Holz & Pellets",
+   "info": "Pellet-, Scheitholz- und Hackgutkessel.",
+   "website": "https://www.froeling.com/de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "froeling.com"
+   ],
+   "color": "#C8102E",
+   "series": [
+    {
+     "id": "froeling.pe1-pellet-pe1c",
+     "name": "PE1 Pellet / PE1c",
+     "category": "holz",
+     "models": [
+      "PE1 Pellet 15",
+      "PE1 Pellet 25",
+      "PE1c Pellet"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "froeling.s4-turbo-s3-turbo",
+     "name": "S4 Turbo / S3 Turbo",
+     "category": "holz",
+     "models": [
+      "S4 Turbo 22",
+      "S4 Turbo 28",
+      "S3 Turbo"
+     ],
+     "keywords": [
+      "scheitholz"
+     ],
+     "documents": []
+    },
+    {
+     "id": "froeling.sp-dual-t4e",
+     "name": "SP Dual / T4e",
+     "category": "holz",
+     "models": [
+      "SP Dual",
+      "T4e"
+     ],
+     "keywords": [
+      "kombikessel",
+      "hackgut"
+     ],
+     "documents": []
+    },
+    {
+     "id": "froeling.lambdatronic-froeling-connect",
+     "name": "Lambdatronic / froeling-connect",
+     "category": "regelung",
+     "models": [
+      "Lambdatronic P 3200",
+      "Lambdatronic H 3200"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "oekofen",
+   "name": "ÖkoFEN",
+   "group": "Holz & Pellets",
+   "info": "Pelletheizungen Pellematic.",
+   "website": "https://www.oekofen.com/de-de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "oekofen.com"
+   ],
+   "color": "#6AB023",
+   "series": [
+    {
+     "id": "oekofen.pellematic-condens-smart-xs",
+     "name": "Pellematic Condens / Smart XS",
+     "category": "holz",
+     "models": [
+      "Pellematic Condens",
+      "Pellematic Smart XS",
+      "Pellematic Compact"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "oekofen.pelletronic-touch",
+     "name": "Pelletronic Touch",
+     "category": "regelung",
+     "models": [
+      "Pelletronic Touch",
+      "Pelletronic Touch 4"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "windhager",
+   "name": "Windhager",
+   "group": "Holz & Pellets",
+   "info": "BioWIN, PuroWIN und LogWIN.",
+   "website": "https://www.windhager.com/de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "windhager.com"
+   ],
+   "color": "#B2001E",
+   "series": [
+    {
+     "id": "windhager.biowin-2-biowin-xl",
+     "name": "BioWIN 2 / BioWIN XL",
+     "category": "holz",
+     "models": [
+      "BioWIN 2 Touch",
+      "BioWIN XL"
+     ],
+     "keywords": [
+      "pellet"
+     ],
+     "documents": []
+    },
+    {
+     "id": "windhager.purowin-logwin",
+     "name": "PuroWIN / LogWIN",
+     "category": "holz",
+     "models": [
+      "PuroWIN",
+      "LogWIN Premium"
+     ],
+     "keywords": [
+      "scheitholz"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "grundfos",
+   "name": "Grundfos",
+   "group": "Pumpen & Armaturen",
+   "info": "Umwälz-, Zirkulations- und Druckerhöhungspumpen, Hebeanlagen.",
+   "website": "https://www.grundfos.com/de",
+   "docPortal": "https://product-selection.grundfos.com/de",
+   "docPortalNote": "Im Grundfos Product Center gibt es Datenblätter und Anleitungen zu jedem Pumpentyp.",
+   "searchDomains": [
+    "grundfos.com"
+   ],
+   "color": "#11497B",
+   "series": [
+    {
+     "id": "grundfos.alpha1-alpha2-alpha3",
+     "name": "ALPHA1 / ALPHA2 / ALPHA3",
+     "category": "pumpe",
+     "models": [
+      "ALPHA1 L 25-60",
+      "ALPHA2 25-60",
+      "ALPHA3 25-40"
+     ],
+     "keywords": [
+      "heizungspumpe",
+      "hocheffizienz"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grundfos.comfort-pm-up",
+     "name": "COMFORT PM / UP",
+     "category": "pumpe",
+     "models": [
+      "UP 15-14 B PM",
+      "COMFORT 15-14 BX PM"
+     ],
+     "keywords": [
+      "zirkulationspumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grundfos.magna1-magna3-ups",
+     "name": "MAGNA1 / MAGNA3 / UPS",
+     "category": "pumpe",
+     "models": [
+      "MAGNA3 32-80",
+      "MAGNA1 25-60",
+      "UPS 25-60"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "grundfos.scala2-cm-cr",
+     "name": "SCALA2 / CM / CR",
+     "category": "pumpe",
+     "models": [
+      "SCALA2 3-45",
+      "CM 3-5",
+      "CR 5-8"
+     ],
+     "keywords": [
+      "druckerhöhung",
+      "hauswasserwerk"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grundfos.sololift2-unilift-multilift",
+     "name": "Sololift2 / Unilift / Multilift",
+     "category": "pumpe",
+     "models": [
+      "Sololift2 WC-1",
+      "Sololift2 C-3",
+      "Unilift KP 250",
+      "Multilift MSS"
+     ],
+     "keywords": [
+      "hebeanlage",
+      "schmutzwasser"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grundfos.sq-sp-brunnenpumpen",
+     "name": "SQ / SP Brunnenpumpen",
+     "category": "pumpe",
+     "models": [
+      "SQ 3-65",
+      "SP 5A"
+     ],
+     "keywords": [
+      "brunnen"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "wilo",
+   "name": "Wilo",
+   "group": "Pumpen & Armaturen",
+   "info": "Hocheffizienzpumpen, Zirkulation und Hebeanlagen.",
+   "website": "https://wilo.com/de/de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "wilo.com"
+   ],
+   "color": "#009C82",
+   "series": [
+    {
+     "id": "wilo.yonos-pico-para",
+     "name": "Yonos PICO / Para",
+     "category": "pumpe",
+     "models": [
+      "Yonos PICO 25/1-6",
+      "Yonos PICO plus",
+      "Para 25/1-8"
+     ],
+     "keywords": [
+      "heizungspumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wilo.stratos-maxo-stratos-pico",
+     "name": "Stratos MAXO / Stratos PICO",
+     "category": "pumpe",
+     "models": [
+      "Stratos MAXO 30/0,5-8",
+      "Stratos PICO 25/1-6"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "wilo.star-z-nova-varios-pico",
+     "name": "Star-Z NOVA / Varios PICO",
+     "category": "pumpe",
+     "models": [
+      "Star-Z NOVA",
+      "Star-Z NOVA C",
+      "Varios PICO-STG"
+     ],
+     "keywords": [
+      "zirkulationspumpe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wilo.hidrainlift-drainlift",
+     "name": "HiDrainlift / DrainLift",
+     "category": "pumpe",
+     "models": [
+      "HiDrainlift 3-35",
+      "DrainLift S",
+      "DrainLift Con"
+     ],
+     "keywords": [
+      "hebeanlage"
+     ],
+     "documents": []
+    },
+    {
+     "id": "wilo.wilo-medana-helix",
+     "name": "Wilo-Medana / Helix",
+     "category": "pumpe",
+     "models": [
+      "Medana CH1-L",
+      "Helix V"
+     ],
+     "keywords": [
+      "druckerhöhung"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "oventrop",
+   "name": "Oventrop",
+   "group": "Pumpen & Armaturen",
+   "info": "Thermostatventile, Strangregulierung, Trinkwasser- und Solarstationen.",
+   "website": "https://www.oventrop.com/de-DE",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "oventrop.com"
+   ],
+   "color": "#E2001A",
+   "series": [
+    {
+     "id": "oventrop.thermostatkoepfe-uni-ventileinsaetze",
+     "name": "Thermostatköpfe Uni / Ventileinsätze",
+     "category": "armatur",
+     "models": [
+      "Uni SH",
+      "Uni LH",
+      "Uni XH",
+      "AV9",
+      "Baureihe AV6"
+     ],
+     "keywords": [
+      "thermostatkopf"
+     ],
+     "documents": []
+    },
+    {
+     "id": "oventrop.multiflex-f-multiblock-t",
+     "name": "Multiflex F / Multiblock T",
+     "category": "armatur",
+     "models": [
+      "Multiflex F",
+      "Multiblock T",
+      "Multiblock TQ"
+     ],
+     "keywords": [
+      "heizkörperanschluss"
+     ],
+     "documents": []
+    },
+    {
+     "id": "oventrop.hydrocontrol-cocon",
+     "name": "Hydrocontrol / Cocon",
+     "category": "armatur",
+     "models": [
+      "Hydrocontrol VTR",
+      "Cocon QTZ",
+      "Aquastrom T plus"
+     ],
+     "keywords": [
+      "strangregulierventil",
+      "abgleich"
+     ],
+     "documents": []
+    },
+    {
+     "id": "oventrop.regusol-regumaq",
+     "name": "Regusol / Regumaq",
+     "category": "speicher",
+     "models": [
+      "Regusol X-Duo",
+      "Regumaq X-30",
+      "Regumaq XZ-30"
+     ],
+     "keywords": [
+      "solarstation",
+      "frischwasserstation"
+     ],
+     "documents": []
+    },
+    {
+     "id": "oventrop.multidis-unibox",
+     "name": "Multidis / Unibox",
+     "category": "heizflaeche",
+     "models": [
+      "Multidis SF",
+      "Unibox E RTL"
+     ],
+     "keywords": [
+      "fbh-verteiler"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "danfoss",
+   "name": "Danfoss",
+   "group": "Pumpen & Armaturen",
+   "info": "Thermostatventile, Differenzdruckregler und Raumregler.",
+   "website": "https://www.danfoss.com/de-de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "danfoss.com"
+   ],
+   "color": "#E2000F",
+   "series": [
+    {
+     "id": "danfoss.thermostatventile-ra-n-ra-un-rlv",
+     "name": "Thermostatventile RA-N / RA-UN / RLV",
+     "category": "armatur",
+     "models": [
+      "RA-N",
+      "RA-UN",
+      "RLV-S",
+      "RAS-C2",
+      "RA 2000"
+     ],
+     "keywords": [
+      "thermostatkopf"
+     ],
+     "documents": []
+    },
+    {
+     "id": "danfoss.ab-qm-asv-pv",
+     "name": "AB-QM / ASV-PV",
+     "category": "armatur",
+     "models": [
+      "AB-QM",
+      "ASV-PV",
+      "ASV-BD",
+      "MSV-BD"
+     ],
+     "keywords": [
+      "differenzdruckregler",
+      "abgleich"
+     ],
+     "documents": []
+    },
+    {
+     "id": "danfoss.danfoss-ally-icon",
+     "name": "Danfoss Ally / Icon",
+     "category": "regelung",
+     "models": [
+      "Ally eTRV",
+      "Icon2",
+      "Icon Raumthermostat"
+     ],
+     "keywords": [
+      "smart home",
+      "fußbodenheizung"
+     ],
+     "documents": []
+    },
+    {
+     "id": "danfoss.ecl-comfort",
+     "name": "ECL Comfort",
+     "category": "regelung",
+     "models": [
+      "ECL Comfort 110",
+      "ECL Comfort 210",
+      "ECL Comfort 310"
+     ],
+     "keywords": [
+      "fernwärme"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "resideo-honeywell-home",
+   "name": "Resideo (Honeywell Home)",
+   "group": "Pumpen & Armaturen",
+   "info": "Braukmann-Armaturen, Filter, Druckminderer, evohome.",
+   "website": "https://www.resideo.com/de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "resideo.com",
+    "homecomfort.resideo.com"
+   ],
+   "color": "#1C4E9D",
+   "series": [
+    {
+     "id": "resideo-honeywell-home.druckminderer-d06f-d04fm",
+     "name": "Druckminderer D06F / D04FM",
+     "category": "armatur",
+     "models": [
+      "D06F",
+      "D04FM",
+      "D05FS"
+     ],
+     "keywords": [
+      "braukmann"
+     ],
+     "documents": []
+    },
+    {
+     "id": "resideo-honeywell-home.filter-ff06-f76s-fk06",
+     "name": "Filter FF06 / F76S / FK06",
+     "category": "armatur",
+     "models": [
+      "FF06",
+      "F76S",
+      "FK06",
+      "HS10S"
+     ],
+     "keywords": [
+      "rückspülfilter",
+      "filterkombination"
+     ],
+     "documents": []
+    },
+    {
+     "id": "resideo-honeywell-home.systemtrenner-heizungsfuellung",
+     "name": "Systemtrenner / Heizungsfüllung",
+     "category": "armatur",
+     "models": [
+      "BA295",
+      "NK300",
+      "VF06"
+     ],
+     "keywords": [
+      "füllkombination"
+     ],
+     "documents": []
+    },
+    {
+     "id": "resideo-honeywell-home.evohome-lyric",
+     "name": "evohome / Lyric",
+     "category": "regelung",
+     "models": [
+      "evohome",
+      "Lyric T6",
+      "HR92"
+     ],
+     "keywords": [
+      "smart home"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "geberit",
+   "name": "Geberit",
+   "group": "Sanitär",
+   "info": "Vorwand-, Spül- und Rohrleitungssysteme, AquaClean.",
+   "website": "https://www.geberit.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "geberit.de",
+    "geberit.com"
+   ],
+   "color": "#005CA9",
+   "series": [
+    {
+     "id": "geberit.duofix-gis",
+     "name": "Duofix / GIS",
+     "category": "sanitaer",
+     "models": [
+      "Duofix WC 112 cm",
+      "Duofix UP320",
+      "GIS"
+     ],
+     "keywords": [
+      "vorwand",
+      "montageelement"
+     ],
+     "documents": []
+    },
+    {
+     "id": "geberit.sigma-omega-delta-spuelkaesten",
+     "name": "Sigma / Omega / Delta Spülkästen",
+     "category": "sanitaer",
+     "models": [
+      "Sigma UP320",
+      "Omega UP300",
+      "Delta UP100",
+      "Sigma01",
+      "Sigma20"
+     ],
+     "keywords": [
+      "betätigungsplatte",
+      "spülkasten"
+     ],
+     "documents": []
+    },
+    {
+     "id": "geberit.monolith",
+     "name": "Monolith",
+     "category": "sanitaer",
+     "models": [
+      "Monolith Plus",
+      "Monolith 101 cm"
+     ],
+     "keywords": [
+      "sanitärmodul"
+     ],
+     "documents": []
+    },
+    {
+     "id": "geberit.aquaclean",
+     "name": "AquaClean",
+     "category": "sanitaer",
+     "models": [
+      "AquaClean Mera",
+      "AquaClean Sela",
+      "AquaClean Tuma",
+      "AquaClean Alba"
+     ],
+     "keywords": [
+      "dusch-wc"
+     ],
+     "documents": []
+    },
+    {
+     "id": "geberit.mapress-mepla-pushfit",
+     "name": "Mapress / Mepla / PushFit",
+     "category": "sanitaer",
+     "models": [
+      "Mapress Edelstahl",
+      "Mapress C-Stahl",
+      "Mepla",
+      "FlowFit",
+      "PushFit"
+     ],
+     "keywords": [
+      "pressfitting",
+      "rohrsystem"
+     ],
+     "documents": []
+    },
+    {
+     "id": "geberit.silent-pe-entwaesserung",
+     "name": "Silent / PE Entwässerung",
+     "category": "sanitaer",
+     "models": [
+      "Silent-db20",
+      "Silent-PP",
+      "Geberit PE"
+     ],
+     "keywords": [
+      "abwasser"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "grohe",
+   "name": "Grohe",
+   "group": "Sanitär",
+   "info": "Armaturen, Unterputzsysteme Rapido/Rapid SL, Grohe Blue.",
+   "website": "https://www.grohe.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "grohe.de",
+    "grohe.com"
+   ],
+   "color": "#14365D",
+   "series": [
+    {
+     "id": "grohe.rapid-sl-rapido-smartbox",
+     "name": "Rapid SL / Rapido SmartBox",
+     "category": "sanitaer",
+     "models": [
+      "Rapid SL 38528",
+      "Rapido SmartBox 35600"
+     ],
+     "keywords": [
+      "unterputz",
+      "vorwand"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grohe.grohtherm-smartcontrol",
+     "name": "Grohtherm / SmartControl",
+     "category": "sanitaer",
+     "models": [
+      "Grohtherm 800",
+      "Grohtherm 1000",
+      "Grohtherm SmartControl"
+     ],
+     "keywords": [
+      "thermostat",
+      "dusche"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grohe.eurosmart-essence-eurostyle",
+     "name": "Eurosmart / Essence / Eurostyle",
+     "category": "sanitaer",
+     "models": [
+      "Eurosmart",
+      "Essence",
+      "Eurostyle"
+     ],
+     "keywords": [
+      "waschtisch"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grohe.grohe-blue-red",
+     "name": "GROHE Blue / Red",
+     "category": "sanitaer",
+     "models": [
+      "Blue Home",
+      "Blue Professional",
+      "Red Duo"
+     ],
+     "keywords": [
+      "sprudel",
+      "kochend"
+     ],
+     "documents": []
+    },
+    {
+     "id": "grohe.sense-guard",
+     "name": "Sense Guard",
+     "category": "armatur",
+     "models": [
+      "Sense Guard",
+      "Sense"
+     ],
+     "keywords": [
+      "leckage",
+      "wasserschutz"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "hansgrohe",
+   "name": "hansgrohe",
+   "group": "Sanitär",
+   "info": "Armaturen, Brausen, iBox universal.",
+   "website": "https://www.hansgrohe.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "hansgrohe.de",
+    "hansgrohe.com"
+   ],
+   "color": "#000000",
+   "series": [
+    {
+     "id": "hansgrohe.ibox-universal-showerselect",
+     "name": "iBox universal / ShowerSelect",
+     "category": "sanitaer",
+     "models": [
+      "iBox universal 2",
+      "ShowerSelect",
+      "ShowerSelect Comfort"
+     ],
+     "keywords": [
+      "unterputz"
+     ],
+     "documents": []
+    },
+    {
+     "id": "hansgrohe.raindance-croma-pulsify",
+     "name": "Raindance / Croma / Pulsify",
+     "category": "sanitaer",
+     "models": [
+      "Raindance Select",
+      "Croma Select",
+      "Pulsify"
+     ],
+     "keywords": [
+      "brause",
+      "showerpipe"
+     ],
+     "documents": []
+    },
+    {
+     "id": "hansgrohe.talis-logis-focus",
+     "name": "Talis / Logis / Focus",
+     "category": "sanitaer",
+     "models": [
+      "Talis E",
+      "Talis S",
+      "Logis",
+      "Focus"
+     ],
+     "keywords": [
+      "waschtisch"
+     ],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "kermi",
+   "name": "Kermi",
+   "group": "Heizkörper & Lüftung",
+   "info": "Heizkörper, Flächenheizung, x-change Wärmepumpen, Duschkabinen.",
+   "website": "https://www.kermi.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "kermi.de",
+    "kermi.com"
+   ],
+   "color": "#E30613",
+   "series": [
+    {
+     "id": "kermi.therm-x2-profil-plan",
+     "name": "therm-x2 Profil / Plan",
+     "category": "heizflaeche",
+     "models": [
+      "FK0",
+      "FTV",
+      "PTV",
+      "therm-x2 Profil-V"
+     ],
+     "keywords": [
+      "flachheizkörper"
+     ],
+     "documents": []
+    },
+    {
+     "id": "kermi.x-net-flaechenheizung",
+     "name": "x-net Flächenheizung",
+     "category": "heizflaeche",
+     "models": [
+      "x-net C12",
+      "x-net Verteiler"
+     ],
+     "keywords": [
+      "fußbodenheizung"
+     ],
+     "documents": []
+    },
+    {
+     "id": "kermi.x-change-dynamic",
+     "name": "x-change dynamic",
+     "category": "wp",
+     "models": [
+      "x-change dynamic pro",
+      "x-change dynamic AC"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "kermi.x-well-lueftung",
+     "name": "x-well Lüftung",
+     "category": "lueftung",
+     "models": [
+      "x-well D12",
+      "x-well S150"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "kermi.x-center-x-buffer-x-change",
+     "name": "x-center x-buffer / x-change",
+     "category": "speicher",
+     "models": [
+      "x-buffer",
+      "x-center"
+     ],
+     "keywords": [],
+     "documents": []
+    }
+   ]
+  },
+  {
+   "id": "zehnder",
+   "name": "Zehnder",
+   "group": "Heizkörper & Lüftung",
+   "info": "Komfortlüftung ComfoAir, Design-Heizkörper.",
+   "website": "https://www.zehnder-systems.de",
+   "docPortal": null,
+   "docPortalNote": null,
+   "searchDomains": [
+    "zehnder-systems.de",
+    "zehnder-systems.com"
+   ],
+   "color": "#E2001A",
+   "series": [
+    {
+     "id": "zehnder.comfoair-q-comfoair-e-comfoair-flex",
+     "name": "ComfoAir Q / ComfoAir E / ComfoAir Flex",
+     "category": "lueftung",
+     "models": [
+      "ComfoAir Q350",
+      "ComfoAir Q450",
+      "ComfoAir Q600",
+      "ComfoAir E300",
+      "ComfoAir Flex"
+     ],
+     "keywords": [
+      "kwl"
+     ],
+     "documents": []
+    },
+    {
+     "id": "zehnder.comfoconnect-comfocontrol",
+     "name": "ComfoConnect / ComfoControl",
+     "category": "regelung",
+     "models": [
+      "ComfoConnect LAN C",
+      "ComfoSense C"
+     ],
+     "keywords": [],
+     "documents": []
+    },
+    {
+     "id": "zehnder.charleston-yucca-subway",
+     "name": "Charleston / Yucca / Subway",
+     "category": "heizflaeche",
+     "models": [
+      "Charleston",
+      "Yucca",
+      "Subway"
+     ],
+     "keywords": [
+      "designheizkörper",
+      "badheizkörper"
+     ],
+     "documents": []
+    }
+   ]
+  }
+ ]
+}
