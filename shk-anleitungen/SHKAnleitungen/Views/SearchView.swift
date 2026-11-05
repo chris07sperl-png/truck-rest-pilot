@@ -7,6 +7,8 @@ struct SearchView: View {
     @State private var category: String?
     @State private var textHits: [TextHit] = []
     @State private var browser: BrowserLink?
+    @State private var showScanner = false
+    @State private var scannedSeries: String?
 
     private var trimmed: String { query.trimmingCharacters(in: .whitespaces) }
 
@@ -113,6 +115,28 @@ struct SearchView: View {
             }
         }
         .sheet(item: $browser) { link in WebBrowserView(link: link) }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { showScanner = true } label: {
+                    Label("Typenschild scannen", systemImage: "text.viewfinder")
+                }
+            }
+        }
+        .sheet(isPresented: $showScanner) {
+            NameplateScannerView { scan in
+                if let sid = scan.seriesID {
+                    scannedSeries = sid
+                } else if let mid = scan.manufacturerID, let m = catalog.manufacturer(mid) {
+                    query = m.name
+                } else {
+                    // Längste Zeile mit Ziffern ist meist die Typbezeichnung.
+                    query = scan.text.components(separatedBy: .newlines)
+                        .filter { $0.contains(where: \.isNumber) }
+                        .max { $0.count < $1.count } ?? ""
+                }
+            }
+        }
+        .navigationDestination(item: $scannedSeries) { sid in SeriesDetailView(seriesID: sid) }
     }
 
     @ViewBuilder
@@ -147,6 +171,7 @@ struct SearchView: View {
             Label("„vitodens 200“, „cgb2k“ oder „B2HF“ – Leerzeichen und Bindestriche sind egal.", systemImage: "lightbulb")
             Label("Nach Produktart suchen: „wärmepumpe wolf“, „therme“, „hebeanlage“.", systemImage: "square.grid.2x2")
             Label("Störcodes wie „F.28“ werden im Text deiner Offline-PDFs gefunden.", systemImage: "exclamationmark.triangle")
+            Label("Oben rechts: Typenschild mit der Kamera scannen.", systemImage: "text.viewfinder")
         }
         .font(.subheadline)
         .foregroundStyle(.secondary)

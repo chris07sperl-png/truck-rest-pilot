@@ -128,7 +128,7 @@ final class CatalogStore {
     }
 
     var groupedManufacturers: [ManufacturerGroup] {
-        let order = ["Heiztechnik", "Wärmepumpen & Klima", "Holz & Pellets", "Pumpen & Armaturen", "Sanitär", "Heizkörper & Lüftung"]
+        let order = ["Heiztechnik", "Wärmepumpen & Klima", "Holz & Pellets", "Pumpen & Armaturen", "Wasser & Druckhaltung", "Sanitär", "Installationssysteme", "Heizkörper & Lüftung"]
         let grouped = Dictionary(grouping: manufacturers, by: \.group)
         return grouped.keys
             .sorted { (order.firstIndex(of: $0) ?? 99, $0) < (order.firstIndex(of: $1) ?? 99, $1) }

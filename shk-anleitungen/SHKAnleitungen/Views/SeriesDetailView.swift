@@ -4,6 +4,7 @@ import UniformTypeIdentifiers
 struct SeriesDetailView: View {
     @Environment(CatalogStore.self) private var catalog
     @Environment(LibraryStore.self) private var library
+    @Environment(InstallationStore.self) private var installations
     let seriesID: String
 
     @State private var selectedModel: String?
@@ -63,6 +64,15 @@ struct SeriesDetailView: View {
                         NavigationLink(value: Route.document(doc.id, page: nil, highlight: nil)) { DocumentRow(document: doc) }
                     }
                     .onDelete { idx in idx.map { offline[$0] }.forEach(library.delete) }
+                }
+            }
+
+            let installed = installations.installations(withSeries: s.id)
+            if !installed.isEmpty {
+                Section("In deinen Anlagen") {
+                    ForEach(installed) { inst in
+                        NavigationLink(value: Route.installation(inst.id)) { InstallationRow(installation: inst) }
+                    }
                 }
             }
 

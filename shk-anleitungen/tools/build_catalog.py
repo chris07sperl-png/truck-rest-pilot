@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 # Bei Änderungen am Katalog hochsetzen, damit die App die neue Version erkennt.
-CATALOG_UPDATED = "2026-11-05"
+CATALOG_UPDATED = "2026-11-06"
 
 OUT = Path(__file__).resolve().parent.parent / "SHKAnleitungen" / "Resources" / "catalog.json"
 
@@ -39,6 +39,8 @@ CATEGORIES = [
     ("sanitaer", "Sanitär", "shower", ["sanitär", "wc", "spülkasten", "vorwand", "dusche", "armatur", "waschtisch", "unterputz", "installationssystem", "rohr"]),
     ("heizflaeche", "Heizkörper & Fußbodenheizung", "heater.vertical", ["heizkörper", "fußbodenheizung", "flächenheizung", "verteiler", "konvektor"]),
     ("elektro", "Elektro-Warmwasser", "bolt", ["durchlauferhitzer", "elektrospeicher", "kleinspeicher", "warmwasser elektrisch"]),
+    ("wasser", "Wasseraufbereitung", "drop.triangle", ["enthärtung", "enthärtungsanlage", "wasserfilter", "rückspülfilter", "entkalkung", "leckageschutz", "wasserstop", "heizungswasser"]),
+    ("druck", "Druckhaltung & Ausdehnung", "gauge.with.dots.needle.50percent", ["ausdehnungsgefäß", "mag", "membranausdehnungsgefäß", "druckhaltung", "entgasung", "vordruck", "nachspeisung"]),
 ]
 
 # Jeder Hersteller: Gruppe, Kurzinfo, Webseite, Dokumenten-Portal (nur wenn
@@ -496,6 +498,256 @@ MANUFACTURERS = [
             ("ComfoAir Q / ComfoAir E / ComfoAir Flex", "lueftung", ["ComfoAir Q350", "ComfoAir Q450", "ComfoAir Q600", "ComfoAir E300", "ComfoAir Flex"], ["kwl"]),
             ("ComfoConnect / ComfoControl", "regelung", ["ComfoConnect LAN C", "ComfoSense C"], []),
             ("Charleston / Yucca / Subway", "heizflaeche", ["Charleston", "Yucca", "Subway"], ["designheizkörper", "badheizkörper"]),
+        ],
+    },
+    # ---- Erweiterung 2 ----
+    {
+        "name": "ATAG", "group": "Heiztechnik",
+        "info": "Gas-Brennwertgeräte i-Serie und Q-Serie.",
+        "website": "https://www.atag-heiztechnik.de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["atag-heiztechnik.de", "atagheating.com"], "color": "#E30613",
+        "series": [
+            ("i-Serie", "gas", ["i24C", "i28C", "i36C", "i22S", "i32S"], ["kombitherme"]),
+            ("Q-Serie / XL-Serie", "gas", ["Q25S", "Q38S", "Q51S", "XL50", "XL100"], ["gewerbe"]),
+            ("ATAG One / Brainz", "regelung", ["ATAG One", "Brainz"], ["raumregler", "app"]),
+        ],
+    },
+    {
+        "name": "alpha innotec", "group": "Wärmepumpen & Klima",
+        "info": "Luft- und Sole-Wärmepumpen mit Luxtronik-Regelung.",
+        "website": "https://www.alpha-innotec.com/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["alpha-innotec.com", "alpha-innotec.de"], "color": "#E2001A",
+        "series": [
+            ("alira LWAV / LWDV", "wp", ["LWAV 82R1/3", "LWAV 122R3", "LWDV 91-1/3", "LWDV 121-1/3"], ["split", "luft-wasser"]),
+            ("LWD / LWCV", "wp", ["LWD 50A", "LWD 70A", "LWCV 82R1/3"], ["monoblock"]),
+            ("SWC / WZSV", "wp", ["SWC 62H3", "SWC 102H3", "WZSV 62H3M", "WZSV 92K3M"], ["sole", "kompakt"]),
+            ("Luxtronik 2.1", "regelung", ["Luxtronik 2.1", "Luxtronik 2.0"], ["wärmepumpenregler", "heatpump24"]),
+        ],
+    },
+    {
+        "name": "iDM", "group": "Wärmepumpen & Klima",
+        "info": "Wärmepumpen AERO und TERRA aus Österreich.",
+        "website": "https://www.idm-energie.at/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["idm-energie.at", "idm-energie.de"], "color": "#E30613",
+        "series": [
+            ("AERO SLM / AERO ALM", "wp", ["AERO SLM 3-11", "AERO SLM 6-17", "AERO ALM 4-12"], ["luft-wasser"]),
+            ("TERRA SW Max / TERRA SW Complete", "wp", ["TERRA SW 8 Max", "TERRA SW 13 Max", "TERRA SW Complete"], ["sole"]),
+            ("Navigator 2.0 / 10.0", "regelung", ["Navigator 2.0", "Navigator 10.0", "myiDM"], []),
+        ],
+    },
+    {
+        "name": "Ochsner", "group": "Wärmepumpen & Klima",
+        "info": "Wärmepumpen AIR Eagle, AIR Hawk und Erdreich-Wärmepumpen.",
+        "website": "https://www.ochsner.com/de-de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["ochsner.com"], "color": "#005A9C",
+        "series": [
+            ("AIR Eagle / AIR Hawk", "wp", ["AIR EAGLE 314 C11A", "AIR HAWK 518 C11A", "AIR HAWK 208 C11A"], ["luft-wasser"]),
+            ("GMSW / Terra", "wp", ["GMSW 10 plus", "GMSW 15 HK"], ["sole"]),
+            ("OTE Regelung", "regelung", ["OTE 3", "OTE Web"], []),
+        ],
+    },
+    {
+        "name": "Hargassner", "group": "Holz & Pellets",
+        "info": "Pellet-, Hackgut- und Scheitholzkessel.",
+        "website": "https://www.hargassner.com/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["hargassner.com"], "color": "#CC0000",
+        "series": [
+            ("Nano-PK / Eco-PK", "holz", ["Nano-PK 6-32", "Eco-PK 45-120"], ["pellet"]),
+            ("Neo-HV / HV-Lambda", "holz", ["Neo-HV 20", "Neo-HV 30", "Neo-HV 40"], ["scheitholz"]),
+            ("ECO-HK / Magic", "holz", ["ECO-HK 20-60", "Magic HK"], ["hackgut"]),
+        ],
+    },
+    {
+        "name": "KWB", "group": "Holz & Pellets",
+        "info": "Pellet-, Hackgut- und Kombikessel.",
+        "website": "https://www.kwb.net/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["kwb.net"], "color": "#008C45",
+        "series": [
+            ("easyfire / Pelletfire Plus", "holz", ["easyfire 2", "easyfire 3", "Pelletfire Plus"], ["pellet"]),
+            ("multifire / combifire", "holz", ["multifire MF2", "combifire CF2"], ["hackgut", "kombikessel"]),
+            ("Comfort 4 Regelung", "regelung", ["Comfort 4", "Comfort Online"], []),
+        ],
+    },
+    {
+        "name": "Solvis", "group": "Heiztechnik",
+        "info": "Schichtenspeicher-Heizzentralen und Wärmepumpen.",
+        "website": "https://www.solvis.de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["solvis.de"], "color": "#F39200",
+        "series": [
+            ("SolvisMax", "speicher", ["SolvisMax Gas", "SolvisMax Öl", "SolvisMax Pur", "SolvisMax Pellet"], ["schichtenspeicher", "heizzentrale"]),
+            ("SolvisBen / SolvisLea", "wp", ["SolvisBen", "SolvisLea"], []),
+            ("SolvisControl", "regelung", ["SolvisControl 3", "SolvisRemote"], []),
+        ],
+    },
+    {
+        "name": "Paradigma", "group": "Heiztechnik",
+        "info": "Solarthermie (CPC-Röhrenkollektoren) und Pelletkessel.",
+        "website": "https://www.paradigma.de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["paradigma.de"], "color": "#E2001A",
+        "series": [
+            ("AquaSystem / CPC Star", "solar", ["CPC Star azzurro", "AQUA PLASMA", "CPC 45"], ["röhrenkollektor"]),
+            ("Pelletti / Peleo", "holz", ["Pelletti III", "Peleo Optima"], ["pellet"]),
+            ("SystaComfort", "regelung", ["SystaComfort II", "SystaWeb"], []),
+        ],
+    },
+    {
+        "name": "Dimplex", "group": "Wärmepumpen & Klima",
+        "info": "Wärmepumpen und Wärmepumpenmanager.",
+        "website": "https://dimplex.de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["dimplex.de"], "color": "#003D7C",
+        "series": [
+            ("System M / LA-Serie", "wp", ["System M", "LA 12S-TU", "LA 18S-TU", "LA 6S-TUR"], ["luft-wasser"]),
+            ("SI-Serie", "wp", ["SI 8TU", "SI 11TU", "SIK 7TES"], ["sole"]),
+            ("Wärmepumpenmanager WPM", "regelung", ["WPM Touch", "WPM EconPlus"], []),
+        ],
+    },
+    {
+        "name": "CLAGE", "group": "Wärmepumpen & Klima",
+        "info": "Durchlauferhitzer und Kleinspeicher.",
+        "website": "https://www.clage.de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["clage.de", "clage.com"], "color": "#0072BC",
+        "series": [
+            ("DSX / DEX / DCX", "elektro", ["DSX Touch", "DEX Next", "DCX Next", "DBX Next"], ["durchlauferhitzer"]),
+            ("CEX / MCX", "elektro", ["CEX 9", "MCX 3", "MCX 6"], ["kleindurchlauferhitzer"]),
+        ],
+    },
+    {
+        "name": "Viega", "group": "Installationssysteme",
+        "info": "Pressverbinder, Rohrleitungssysteme und Vorwandtechnik.",
+        "website": "https://www.viega.de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["viega.de", "viega.com"], "color": "#FFCC00",
+        "series": [
+            ("Profipress / Sanpress / Megapress", "sanitaer", ["Profipress", "Sanpress Inox", "Megapress", "Temponox"], ["pressfitting", "kupfer", "edelstahl"]),
+            ("Raxofix / Smartpress", "sanitaer", ["Raxofix", "Smartpress"], ["mehrschichtverbundrohr"]),
+            ("Prevista / Prestabo", "sanitaer", ["Prevista Dry", "Prevista Pure", "Prestabo"], ["vorwand", "spülkasten"]),
+            ("Visign Betätigungsplatten", "sanitaer", ["Visign for Style 20", "Visign for More 200"], ["betätigungsplatte"]),
+            ("Advantix Duschrinnen", "sanitaer", ["Advantix Vario", "Advantix Cleviva"], ["bodenablauf", "duschrinne"]),
+            ("Fonterra Flächenheizung", "heizflaeche", ["Fonterra Base", "Fonterra Side 12"], ["fußbodenheizung"]),
+        ],
+    },
+    {
+        "name": "Uponor", "group": "Installationssysteme",
+        "info": "Verbundrohrsysteme, Flächenheizung und Smatrix-Regelung.",
+        "website": "https://www.uponor.com/de-de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["uponor.com"], "color": "#0069B4",
+        "series": [
+            ("Uni Pipe PLUS / S-Press PLUS", "sanitaer", ["Uni Pipe PLUS", "S-Press PLUS", "RS-Press"], ["mehrschichtverbundrohr"]),
+            ("Minitec / Klett / Tacker", "heizflaeche", ["Minitec", "Klett", "Tacker"], ["fußbodenheizung"]),
+            ("Smatrix Wave / Base / Pulse", "regelung", ["Smatrix Wave", "Smatrix Base", "Smatrix Pulse"], ["einzelraumregelung"]),
+            ("Vario / Verteiler", "heizflaeche", ["Vario PLUS", "Vario S"], ["heizkreisverteiler"]),
+        ],
+    },
+    {
+        "name": "REHAU", "group": "Installationssysteme",
+        "info": "RAUTITAN, Flächenheizung und Nea Smart.",
+        "website": "https://www.rehau.com/de-de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["rehau.com"], "color": "#E1001A",
+        "series": [
+            ("RAUTITAN", "sanitaer", ["RAUTITAN flex", "RAUTITAN stabil", "RAUTITAN pink+"], ["schiebehülse"]),
+            ("RAUTHERM / Flächenheizung", "heizflaeche", ["RAUTHERM S", "RAUTHERM SPEED", "Varionova"], ["fußbodenheizung"]),
+            ("Nea Smart 2.0", "regelung", ["Nea Smart 2.0", "Nea Smart R"], ["einzelraumregelung"]),
+            ("RAUPIANO", "sanitaer", ["RAUPIANO PLUS", "RAUPIANO LIGHT"], ["abwasser"]),
+        ],
+    },
+    {
+        "name": "TECE", "group": "Installationssysteme",
+        "info": "Vorwandsysteme, Betätigungsplatten und Duschrinnen.",
+        "website": "https://www.tece.com/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["tece.com"], "color": "#00548A",
+        "series": [
+            ("TECEprofil / TECEbox", "sanitaer", ["TECEprofil", "TECEbox", "TECElux"], ["vorwand", "spülkasten"]),
+            ("TECEloop / TECEsquare / TECEnow", "sanitaer", ["TECEloop", "TECEsquare", "TECEnow", "TECEvelvet"], ["betätigungsplatte"]),
+            ("TECEdrainline / TECEdrainpoint", "sanitaer", ["TECEdrainline", "TECEdrainpoint S"], ["duschrinne"]),
+            ("TECEflex / TECElogo", "sanitaer", ["TECEflex", "TECElogo"], ["rohrsystem"]),
+        ],
+    },
+    {
+        "name": "IMI Heimeier", "group": "Pumpen & Armaturen",
+        "info": "Thermostatköpfe, Ventile und Strangregulierung.",
+        "website": "https://www.imi-hydronic.com/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["imi-hydronic.com"], "color": "#003A70",
+        "series": [
+            ("Thermostatkopf K / DX / Halo", "armatur", ["Thermostat-Kopf K", "DX", "Halo"], ["thermostatkopf"]),
+            ("Eclipse / Calypso / V-exact II", "armatur", ["Eclipse", "Calypso exact", "V-exact II", "Regutec"], ["ventileinsatz", "abgleich"]),
+            ("Multilux / Vekolux", "armatur", ["Multilux 4", "Vekolux"], ["heizkörperanschluss"]),
+            ("STAD / TA-Scope", "armatur", ["STAD", "STAP", "TA-Scope"], ["strangregulierventil"]),
+        ],
+    },
+    {
+        "name": "SYR", "group": "Wasser & Druckhaltung",
+        "info": "Filter, Druckminderer, Leckageschutz (Hans Sasserath).",
+        "website": "https://www.syr.de/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["syr.de"], "color": "#E30613",
+        "series": [
+            ("DRUFI / Filter", "wasser", ["DRUFI+", "DRUFI+ FF", "Filter 2315"], ["druckminderer", "rückspülfilter"]),
+            ("SafeTech Connect / SafeFloor", "wasser", ["SafeTech Connect", "SafeTech plus", "SafeFloor Connect"], ["leckageschutz"]),
+            ("LEX Plus 10 Connect / NeoSoft", "wasser", ["LEX Plus 10 S Connect", "NeoSoft 2500"], ["enthärtung"]),
+            ("Systemtrenner BA / HeizungsWasserFüllstation", "wasser", ["BA 6600", "HWF Connect"], ["füllkombination", "heizungswasser"]),
+        ],
+    },
+    {
+        "name": "JUDO", "group": "Wasser & Druckhaltung",
+        "info": "Enthärtung, Filter und Leckageschutz.",
+        "website": "https://judo.eu/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["judo.eu"], "color": "#005BA1",
+        "series": [
+            ("i-soft / i-soft safe+", "wasser", ["i-soft K SAFE+", "i-soft PRO", "i-soft safe+"], ["enthärtung"]),
+            ("PROFIMAT / ZEWA", "wasser", ["PROFIMAT", "ZEWA PLUS", "QuickSwitch Plus"], ["rückspülfilter"]),
+            ("ZEWA i-SAFE / PROM-i-SAFE", "wasser", ["ZEWA i-SAFE", "PROM-i-SAFE"], ["leckageschutz"]),
+            ("HEIFI / JUDO Heizungswasser", "wasser", ["HEIFI-TOP", "HEIFI-FILL"], ["heizungswasser", "vde 2035"]),
+        ],
+    },
+    {
+        "name": "BWT", "group": "Wasser & Druckhaltung",
+        "info": "Enthärtungsanlagen, Filter und Heizungswasser.",
+        "website": "https://www.bwt.com/de-de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["bwt.com"], "color": "#002F6C",
+        "series": [
+            ("AQA perla / AQA life", "wasser", ["AQA perla", "AQA perla 20", "AQA life S", "Perla Seta"], ["enthärtung"]),
+            ("Infinity / E1 / Bolero", "wasser", ["Infinity M", "E1 Einhebelfilter", "Avanti FR"], ["rückspülfilter"]),
+            ("AQA Therm", "wasser", ["AQA Therm HES", "AQA Therm SRC", "AQA Therm HFK"], ["heizungswasser", "vdi 2035"]),
+        ],
+    },
+    {
+        "name": "Reflex", "group": "Wasser & Druckhaltung",
+        "info": "Ausdehnungsgefäße, Druckhaltung und Entgasung.",
+        "website": "https://www.reflex-winkelmann.com/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["reflex-winkelmann.com", "reflex.de"], "color": "#E30613",
+        "series": [
+            ("Reflex N / NG / S", "druck", ["N 8", "N 18", "N 25", "NG 35", "S 33"], ["membranausdehnungsgefäß"]),
+            ("Refix DD / DE", "druck", ["Refix DD 8", "Refix DD 18", "Refix DE 33"], ["trinkwasser"]),
+            ("Reflexomat / Variomat", "druck", ["Reflexomat", "Variomat", "Gigamat"], ["druckhaltestation"]),
+            ("Servitec / Exvoid", "druck", ["Servitec", "Exvoid", "Exdirt"], ["entgasung", "abscheider"]),
+        ],
+    },
+    {
+        "name": "Flamco", "group": "Wasser & Druckhaltung",
+        "info": "Ausdehnungsgefäße Flexcon und Abscheider.",
+        "website": "https://flamcogroup.com/de",
+        "docPortal": None, "docPortalNote": None,
+        "domains": ["flamcogroup.com"], "color": "#E2001A",
+        "series": [
+            ("Flexcon / Airfix", "druck", ["Flexcon 18", "Flexcon 25", "Flexcon R", "Airfix R"], ["membranausdehnungsgefäß"]),
+            ("Flamcovent / Clean Smart", "druck", ["Flamcovent", "Flamco Clean Smart", "XStream"], ["entlüfter", "schlammabscheider"]),
         ],
     },
 ]

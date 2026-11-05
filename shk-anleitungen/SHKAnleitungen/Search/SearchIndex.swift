@@ -21,6 +21,8 @@ struct SearchIndex {
         let weakWords: [String]
         let compact: String
         let models: [String]
+        /// Erstes Wort des Herstellernamens, kompakt (z. B. "viessmann", "bosch").
+        let manufacturerKey: String
     }
 
     struct Result: Identifiable {
@@ -40,7 +42,8 @@ struct SearchIndex {
             entries.append(Entry(
                 kind: .manufacturer, id: m.id, manufacturerID: m.id, category: nil,
                 title: m.name, titleWords: Self.words(m.name),
-                words: Self.words(mText), weakWords: [], compact: Self.compact(m.name), models: []
+                words: Self.words(mText), weakWords: [], compact: Self.compact(m.name), models: [],
+                manufacturerKey: Self.words(m.name).first ?? ""
             ))
             for s in m.series {
                 let cat = categories[s.category]
@@ -51,7 +54,8 @@ struct SearchIndex {
                     title: s.name, titleWords: Self.words(s.name),
                     words: Self.words(text), weakWords: Self.words(weak),
                     compact: Self.compact(([m.name, s.name] + s.models).joined(separator: " ")),
-                    models: s.models
+                    models: s.models,
+                    manufacturerKey: Self.words(m.name).first ?? ""
                 ))
             }
         }
@@ -94,6 +98,52 @@ struct SearchIndex {
             .sorted { $0.score != $1.score ? $0.score > $1.score : $0.entry.title < $1.entry.title }
             .prefix(limit)
             .map { $0 }
+    }
+
+    /// Erkennt Geräte aus dem Text eines Typenschilds (OCR). Anders als die normale Suche
+    /// müssen nicht alle Wörter passen: Typenschilder enthalten viel anderen Text.
+    func identify(text: String, limit: Int = 6) -> [Result] {
+        let textWords = Set(Self.words(text))
+        let textCompact = Self.compact(text)
+        guard textCompact.count >= 3 else { return [] }
+
+        var results: [Result] = []
+        for entry in entries where entry.kind == .series {
+            var score = 0
+            var bestModel: String?
+            var bestModelLength = 0
+            for model in entry.models {
+                let c = Self.compact(model)
+                guard c.count >= 3, textCompact.contains(c) else { continue }
+                if c.count > bestModelLength { bestModel = model; bestModelLength = c.count }
+            }
+            if bestModel != nil { score += 20 + bestModelLength }
+
+            var titleHits = 0
+            for word in Set(entry.titleWords) where word.count >= 3 && textWords.contains(word) {
+                titleHits += 1
+                score += word.allSatisfy(\.isNumber) ? 3 : 8
+            }
+            guard bestModel != nil || titleHits > 0 else { continue }
+
+            let hasManufacturer = entry.manufacturerKey.count >= 3 && textCompact.contains(entry.manufacturerKey)
+            if hasManufacturer { score += 15 }
+            // Nur eine Zahl ohne Hersteller oder Modell ist zu unsicher.
+            guard score >= 14 else { continue }
+            results.append(Result(entry: entry, score: score, matchedModel: bestModel))
+        }
+        return results
+            .sorted { $0.score != $1.score ? $0.score > $1.score : $0.entry.title < $1.entry.title }
+            .prefix(limit)
+            .map { $0 }
+    }
+
+    /// Hersteller, deren Name im Text vorkommt.
+    func manufacturers(in text: String) -> [String] {
+        let textCompact = Self.compact(text)
+        return entries
+            .filter { $0.kind == .manufacturer && $0.manufacturerKey.count >= 3 && textCompact.contains($0.manufacturerKey) }
+            .map(\.id)
     }
 
     private static func score(token: String, entry: Entry) -> Int {

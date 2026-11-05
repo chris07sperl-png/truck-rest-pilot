@@ -5,9 +5,9 @@ und Produktart, mit einer Suche, die auch Tippfehler verzeiht, und mit Offline-P
 
 ## Was die App kann
 
-- **Hersteller-Katalog**: 28 Hersteller (Viessmann, Wolf, Weishaupt, Buderus, Vaillant, Bosch/Junkers,
-  Brötje, Remeha, Elco, Hoval, Stiebel Eltron, Daikin, NIBE, Grundfos, Wilo, Geberit, Grohe, …) mit
-  197 Produktserien und den Typbezeichnungen vom Typenschild.
+- **Hersteller-Katalog**: 48 Hersteller (Viessmann, Wolf, Weishaupt, Buderus, Vaillant, Bosch/Junkers,
+  Brötje, Remeha, Elco, Hoval, Stiebel Eltron, Daikin, NIBE, Grundfos, Wilo, Geberit, Viega, Reflex, JUDO, …) mit
+  266 Produktserien und den Typbezeichnungen vom Typenschild.
 - **Nach Produktart**: Gas, Öl, Wärmepumpe, Pellets, Brenner, Regelung, Speicher, Solar, Lüftung,
   Klima, Pumpen, Armaturen, Sanitär, Heizkörper, Elektro-Warmwasser.
 - **Anleitung finden**: Pro Gerät und Modell eine gezielte Suche nach Bedienungs-, Montage- oder
@@ -22,6 +22,11 @@ und Produktart, mit einer Suche, die auch Tippfehler verzeiht, und mit Offline-P
   - Kleine Tippfehler: „Vitodnes“.
   - **Volltextsuche in allen Offline-PDFs**, z. B. nach Störcodes wie „F.28“. Der Treffer öffnet das PDF
     an der richtigen Stelle, mit Markierung.
+- **Typenschild-Scanner**: Kamera aufs Typenschild halten (oder ein Foto wählen). Die App erkennt Hersteller,
+  Gerät, Typ und Seriennummer und springt direkt zu den Anleitungen.
+- **Meine Anlagen**: Kunden und Objekte mit Adresse und Telefon, dazu die verbauten Geräte mit Seriennummer,
+  Standort, Foto, Notizen und Wartungsintervall. Fällige Wartungen erscheinen oben in der Liste und als
+  Zahl am Tab.
 - **Favoriten und Verlauf** für Geräte, die man oft braucht.
 
 ## Woher die Daten kommen
@@ -46,12 +51,21 @@ Buderus, Vaillant). Der App-Browser merkt sich die Anmeldung.
 
 Dafür brauchst du einen **Mac mit Xcode 16 oder neuer**. Das iPhone braucht iOS 17 oder neuer.
 
-1. Ordner `shk-anleitungen` auf den Mac holen und `SHKAnleitungen.xcodeproj` öffnen.
+1. Code auf den Mac holen (Terminal):
+   ```
+   git clone -b shk-anleitungen-app https://github.com/chris07sperl-png/truck-rest-pilot.git
+   open truck-rest-pilot/shk-anleitungen/SHKAnleitungen.xcodeproj
+   ```
+   Oder auf GitHub im Branch `shk-anleitungen-app` auf **Code → Download ZIP** klicken, entpacken
+   und `shk-anleitungen/SHKAnleitungen.xcodeproj` doppelt anklicken.
 2. Links das Projekt anklicken, dann **Signing & Capabilities**: unter *Team* deine Apple-ID wählen.
    Bei *Bundle Identifier* eine eigene Kennung eintragen, z. B. `de.deinname.shkanleitungen`.
 3. iPhone per Kabel anschließen und oben als Ziel auswählen. Dann ▶︎ drücken.
 4. Beim ersten Mal auf dem iPhone unter *Einstellungen → Allgemein → VPN & Geräteverwaltung* dem
    Entwickler vertrauen.
+
+Ohne iPhone geht es auch: oben einen Simulator wie „iPhone 16“ wählen und ▶︎ drücken. Kamera und
+Typenschild-Live-Scan gibt es im Simulator nicht, Fotos auswählen funktioniert aber.
 
 Mit einer kostenlosen Apple-ID läuft die App 7 Tage und muss dann neu installiert werden. Für TestFlight
 und den App Store brauchst du das Apple Developer Program (99 €/Jahr).
