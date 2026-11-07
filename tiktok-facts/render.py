@@ -394,7 +394,7 @@ def main(script_path):
         "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
         "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", audio,
         "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
-        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", "-ar", str(SR),
+        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-ar", "48000",
         "-movflags", "+faststart", "-shortest", out], stdin=subprocess.PIPE)
     with Pool(os.cpu_count(), initializer=init_worker, initargs=(cfg,)) as pool:
         for i, fr in enumerate(pool.imap(render_frame, range(nframes), chunksize=6)):
