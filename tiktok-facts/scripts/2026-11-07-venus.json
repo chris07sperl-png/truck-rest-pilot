@@ -1,0 +1,53 @@
+{
+  "id": 1,
+  "date": "2026-11-07",
+  "slug": "venus-tag-laenger-als-jahr",
+  "label": "WUSSTEST DU?",
+  "accent": "#FFB938",
+  "bg": ["#120a2a", "#3d1450"],
+  "length_scale": 0.9,
+  "scenes": [
+    {
+      "text": "Auf der Venus dauert ein Tag länger als ein ganzes Jahr!",
+      "emoji": "🪐",
+      "highlight": ["Tag", "Jahr"]
+    },
+    {
+      "text": "Für eine Drehung um sich selbst braucht sie 243 Erdtage.",
+      "say": "Für eine Drehung um sich selbst braucht sie zweihundertdreiundvierzig Erdtage.",
+      "emoji": "🔄",
+      "highlight": ["243"],
+      "number": {"value": 243, "suffix": "TAGE"}
+    },
+    {
+      "text": "Für eine Runde um die Sonne aber nur 225.",
+      "say": "Für eine Runde um die Sonne aber nur zweihundertfünfundzwanzig.",
+      "emoji": "☀️",
+      "highlight": ["225."],
+      "number": {"value": 225, "suffix": "TAGE"}
+    },
+    {
+      "text": "Und sie dreht sich rückwärts. Die Sonne geht dort im Westen auf.",
+      "emoji": "🌅",
+      "highlight": ["rückwärts", "Westen"]
+    },
+    {
+      "text": "Dazu ist sie mit 465 Grad der heißeste Planet. Heißer als Merkur, obwohl der näher an der Sonne liegt.",
+      "say": "Dazu ist sie mit vierhundertfünfundsechzig Grad der heißeste Planet. Heißer als Merkur, obwohl der näher an der Sonne liegt.",
+      "emoji": "🔥",
+      "highlight": ["heißeste", "Merkur"],
+      "number": {"value": 465, "suffix": "GRAD CELSIUS"}
+    },
+    {
+      "text": "Schuld ist ihre dicke Kohlendioxid-Hülle. Ein Treibhauseffekt völlig außer Kontrolle.",
+      "emoji": "🌡️",
+      "highlight": ["Treibhauseffekt"]
+    },
+    {
+      "text": "Folge mir für jeden Tag einen neuen Fakt!",
+      "emoji": "🤯",
+      "highlight": ["Folge", "jeden"]
+    }
+  ],
+  "caption": "Auf der Venus ist ein Tag länger als ein Jahr 🤯🪐 Hättest du das gewusst? #fakten #wusstestdu #weltraum #venus #wissen #lernenmittiktok #fyp"
+}
